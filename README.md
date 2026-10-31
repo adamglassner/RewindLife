@@ -928,3 +928,13 @@ Any flag except `--title`, `--shot` and `--wait` skips the title screen.
 © 2026 Ironite. All rights reserved.
 
 Made with the [Godot Engine](https://godotengine.org) (MIT license).
+
+## Demo releases (Ironite Launcher)
+
+Rewind Life is available as a **demo** in [Ironite Launcher](https://github.com/adamglassner/launcher),
+which downloads it from this repository's releases and keeps it updated.
+
+To publish a new demo: bump `VERSION` in `scripts/changelog.gd` (and add its WHAT'S NEW entry), then
+push to `main`. The [Release workflow](.github/workflows/release.yml) exports the Windows build with
+Godot 4.7 and publishes `v<version>` with `RewindLife-<version>-windows.zip`; the launcher picks it up
+automatically. Pushes that don't change the version don't publish anything.
