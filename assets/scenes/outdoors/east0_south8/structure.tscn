@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/grass.png" id="1_xxduw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5mj0"]
+albedo_color = Color(0.78431374, 0.84705883, 0.6901961, 1)
+albedo_texture = ExtResource("1_xxduw")
+roughness = 0.88
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_cmwvt"]
+size = Vector3(840, 0.1, 322)
+
+[node name="Structure" type="Node3D" unique_id=1583219221]
+metadata/rl_kids = ["StaticBody3D|0.00,0.00,0.00|"]
+metadata/rl_fp = "2404196493"
+
+[node name="Solid1" type="Node3D" parent="." unique_id=525983261]
+metadata/rl_src = "StaticBody3D|0.00,0.00,0.00|"
+metadata/rl_kids = ["MeshInstance3D|0.00,-0.11,259.00|840.000,0.100,322.000"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="Solid1" unique_id=1131294680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11, 259)
+material_override = SubResource("StandardMaterial3D_h5mj0")
+mesh = SubResource("BoxMesh_cmwvt")
+metadata/rl_src = "MeshInstance3D|0.00,-0.11,259.00|840.000,0.100,322.000"
+metadata/rl_fp = "2335895474"

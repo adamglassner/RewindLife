@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvrn4"]
+albedo_color = Color(0.78431374, 0.8, 0.8156863, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_aa0s8"]
+size = Vector3(0.5, 0.9, 0.35)
+
+[node name="WaterFountain" type="Node3D" unique_id=1760149815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6, 0, -45.225)
+metadata/rl_src = "water_fountain"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.45,0.00|0.500,0.900,0.350"]
+metadata/rl_fp = "3677305910"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1036285141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_mvrn4")
+mesh = SubResource("BoxMesh_aa0s8")
+metadata/rl_src = "MeshInstance3D|0.00,0.45,0.00|0.500,0.900,0.350"
+metadata/rl_fp = "2853364777"

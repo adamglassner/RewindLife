@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w4wu"]
+albedo_color = Color(0.18039216, 0.54901963, 0.3529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_emvgc"]
+size = Vector3(0.3, 0.06, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdjyg"]
+albedo_color = Color(0.78431374, 0.8, 0.8156863, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_xfakj"]
+size = Vector3(0.06, 0.16, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xltiy"]
+size = Vector3(0.34, 0.04, 0.04)
+
+[node name="NguyensSprinkler" type="Node3D" unique_id=1304656172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9000001, 0, 22.4)
+metadata/rl_src = "nguyens_sprinkler"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.03,0.00|0.300,0.060,0.300", "MeshInstance3D|0.00,0.14,0.00|0.060,0.160,0.060", "MeshInstance3D|0.00,0.23,0.00|0.340,0.040,0.040"]
+metadata/rl_fp = "4215433327"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1333376378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+material_override = SubResource("StandardMaterial3D_3w4wu")
+mesh = SubResource("BoxMesh_emvgc")
+metadata/rl_src = "MeshInstance3D|0.00,0.03,0.00|0.300,0.060,0.300"
+metadata/rl_fp = "2894530424"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1335217663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0)
+material_override = SubResource("StandardMaterial3D_vdjyg")
+mesh = SubResource("BoxMesh_xfakj")
+metadata/rl_src = "MeshInstance3D|0.00,0.14,0.00|0.060,0.160,0.060"
+metadata/rl_fp = "3141528322"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=602834654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+material_override = SubResource("StandardMaterial3D_vdjyg")
+mesh = SubResource("BoxMesh_xltiy")
+metadata/rl_src = "MeshInstance3D|0.00,0.23,0.00|0.340,0.040,0.040"
+metadata/rl_fp = "2194504350"

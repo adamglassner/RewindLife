@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h4llb"]
+albedo_color = Color(0.95686275, 0.9019608, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_5dk1r"]
+size = Vector3(0.085, 0.13, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_py0uy"]
+albedo_color = Color(0.84705883, 0.8156863, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcw8y"]
+size = Vector3(0.022, 0.045, 0.014)
+
+[node name="SwitchParkersLivingRoom" type="Node3D" unique_id=1078728293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.355, 0, 28.083)
+metadata/rl_src = "switch_parkers_living_room"
+metadata/rl_kids = ["Plate"]
+metadata/rl_fp = "1820441400"
+
+[node name="Plate" type="Node3D" parent="." unique_id=717641320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+metadata/rl_src = "Plate"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012", "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"]
+metadata/rl_fp = "2869187120"
+
+[node name="Box1" type="MeshInstance3D" parent="Plate" unique_id=1158823013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_h4llb")
+mesh = SubResource("BoxMesh_5dk1r")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012"
+metadata/rl_fp = "3552524831"
+
+[node name="Box2" type="MeshInstance3D" parent="Plate" unique_id=377028156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012, 0.019)
+material_override = SubResource("StandardMaterial3D_py0uy")
+mesh = SubResource("BoxMesh_qcw8y")
+metadata/rl_src = "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"
+metadata/rl_fp = "127491398"

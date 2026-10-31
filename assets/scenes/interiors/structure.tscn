@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20ip1"]
+albedo_color = Color(0.16470589, 0.11764706, 0.101960786, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_vbqgx"]
+size = Vector3(162, 0.4, 22)
+
+[node name="Structure" type="Node3D" unique_id=1661638587]
+metadata/rl_kids = ["MeshInstance3D|57.00,-26.60,-53.00|162.000,0.400,22.000"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=411226309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, -26.6, -53)
+material_override = SubResource("StandardMaterial3D_20ip1")
+cast_shadow = 3
+mesh = SubResource("BoxMesh_vbqgx")
+metadata/rl_src = "MeshInstance3D|57.00,-26.60,-53.00|162.000,0.400,22.000"
+metadata/rl_fp = "2796807978"

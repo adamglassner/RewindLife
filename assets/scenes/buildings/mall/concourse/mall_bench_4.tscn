@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfjfj"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_fes0k"]
+size = Vector3(1.8, 0.08, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tj536"]
+size = Vector3(1.8, 0.45, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xx852"]
+albedo_color = Color(0.2901961, 0.2901961, 0.32156864, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_e6txl"]
+size = Vector3(0.08, 0.42, 0.44)
+
+[node name="MallBench4" type="Node3D" unique_id=919426280]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 99.25, 0, 74.6)
+metadata/rl_src = "mall_bench_4"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.45,0.00|1.800,0.080,0.500", "MeshInstance3D|0.00,0.72,-0.24|1.800,0.450,0.060", "MeshInstance3D|-0.80,0.21,0.00|0.080,0.420,0.440", "MeshInstance3D|0.80,0.21,0.00|0.080,0.420,0.440"]
+metadata/rl_fp = "4201480436"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1148763118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_gfjfj")
+mesh = SubResource("BoxMesh_fes0k")
+metadata/rl_src = "MeshInstance3D|0.00,0.45,0.00|1.800,0.080,0.500"
+metadata/rl_fp = "870849775"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1022065414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72, -0.24)
+material_override = SubResource("StandardMaterial3D_gfjfj")
+mesh = SubResource("BoxMesh_tj536")
+metadata/rl_src = "MeshInstance3D|0.00,0.72,-0.24|1.800,0.450,0.060"
+metadata/rl_fp = "3493418116"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1960925056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.21, 0)
+material_override = SubResource("StandardMaterial3D_xx852")
+mesh = SubResource("BoxMesh_e6txl")
+metadata/rl_src = "MeshInstance3D|-0.80,0.21,0.00|0.080,0.420,0.440"
+metadata/rl_fp = "1877796539"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1393514544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.21, 0)
+material_override = SubResource("StandardMaterial3D_xx852")
+mesh = SubResource("BoxMesh_e6txl")
+metadata/rl_src = "MeshInstance3D|0.80,0.21,0.00|0.080,0.420,0.440"
+metadata/rl_fp = "3781463598"

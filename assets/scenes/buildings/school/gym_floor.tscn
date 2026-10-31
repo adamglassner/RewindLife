@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn2kf"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_8wqth"]
+size = Vector3(6, 0.006, 0.08)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xab4w"]
+albedo_color = Color(0.7529412, 0.19607843, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_t2k8w"]
+size = Vector3(0.6, 0.6, 0.6)
+
+[node name="GymFloor" type="Node3D" unique_id=1376671555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, 0, -51)
+metadata/rl_src = "gym_floor"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.00|6.000,0.006,0.080", "MeshInstance3D|1.20,0.30,1.50|0.600,0.600,0.600"]
+metadata/rl_fp = "2887734768"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1087040583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.003, 0)
+material_override = SubResource("StandardMaterial3D_jn2kf")
+mesh = SubResource("BoxMesh_8wqth")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.00|6.000,0.006,0.080"
+metadata/rl_fp = "1091975216"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=464180036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.3, 1.5)
+material_override = SubResource("StandardMaterial3D_xab4w")
+mesh = SubResource("BoxMesh_t2k8w")
+metadata/rl_src = "MeshInstance3D|1.20,0.30,1.50|0.600,0.600,0.600"
+metadata/rl_fp = "4262150783"

@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf4jw"]
+albedo_color = Color(0.7529412, 0.19607843, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_fn6n4"]
+size = Vector3(5, 1, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf8dy"]
+albedo_color = Color(0.9490196, 0.9411765, 0.9019608, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_sskn3"]
+size = Vector3(5.06, 0.05, 0.76)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dgeb"]
+albedo_color = Color(0.2901961, 0.2901961, 0.32156864, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_k84dy"]
+size = Vector3(0.36, 0.22, 0.3)
+
+[node name="Counter" type="Node3D" unique_id=672509382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97, 0, 33.6)
+metadata/rl_src = "burger_counter"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.50,0.00|5.000,1.000,0.700", "MeshInstance3D|0.00,1.02,0.00|5.060,0.050,0.760", "MeshInstance3D|1.80,1.16,0.00|0.360,0.220,0.300"]
+metadata/rl_fp = "2869581385"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=223986974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_kf4jw")
+mesh = SubResource("BoxMesh_fn6n4")
+metadata/rl_src = "MeshInstance3D|0.00,0.50,0.00|5.000,1.000,0.700"
+metadata/rl_fp = "2203217043"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1835511579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.025, 0)
+material_override = SubResource("StandardMaterial3D_pf8dy")
+mesh = SubResource("BoxMesh_sskn3")
+metadata/rl_src = "MeshInstance3D|0.00,1.02,0.00|5.060,0.050,0.760"
+metadata/rl_fp = "4020267373"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=317806819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 1.16, 0)
+material_override = SubResource("StandardMaterial3D_0dgeb")
+mesh = SubResource("BoxMesh_k84dy")
+metadata/rl_src = "MeshInstance3D|1.80,1.16,0.00|0.360,0.220,0.300"
+metadata/rl_fp = "448503710"

@@ -1,0 +1,63 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k06g5"]
+albedo_color = Color(0.78431374, 0.65882355, 0.47058824, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_tha5c"]
+size = Vector3(0.7, 0.4, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31s48"]
+albedo_color = Color(0.72156864, 0.59607846, 0.40784314, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_beeog"]
+size = Vector3(0.6, 0.35, 0.45)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3g74"]
+albedo_color = Color(0.30980393, 0.47843137, 0.22745098, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_c3s2y"]
+size = Vector3(0.3, 0.12, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf738"]
+albedo_color = Color(0.7529412, 0.19607843, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_pg7eb"]
+size = Vector3(0.12, 0.12, 0.12)
+
+[node name="Xmas" type="Node3D" unique_id=1714304603]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.55, -30, -58.35)
+metadata/rl_src = "hendersons_xmas"
+metadata/rl_kids = ["MeshInstance3D|-0.30,0.20,0.00|0.700,0.400,0.500", "MeshInstance3D|0.35,0.17,0.02|0.600,0.350,0.450", "MeshInstance3D|-0.30,0.46,0.00|0.300,0.120,0.300", "MeshInstance3D|0.30,0.41,0.00|0.120,0.120,0.120"]
+metadata/rl_fp = "3808793974"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=2031619654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.2, 0)
+material_override = SubResource("StandardMaterial3D_k06g5")
+mesh = SubResource("BoxMesh_tha5c")
+metadata/rl_src = "MeshInstance3D|-0.30,0.20,0.00|0.700,0.400,0.500"
+metadata/rl_fp = "4109171339"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1682701651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.175, 0.02)
+material_override = SubResource("StandardMaterial3D_31s48")
+mesh = SubResource("BoxMesh_beeog")
+metadata/rl_src = "MeshInstance3D|0.35,0.17,0.02|0.600,0.350,0.450"
+metadata/rl_fp = "34944781"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=68586705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.46, 0)
+material_override = SubResource("StandardMaterial3D_w3g74")
+mesh = SubResource("BoxMesh_c3s2y")
+metadata/rl_src = "MeshInstance3D|-0.30,0.46,0.00|0.300,0.120,0.300"
+metadata/rl_fp = "1148822405"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=666162411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.41, 0)
+material_override = SubResource("StandardMaterial3D_sf738")
+mesh = SubResource("BoxMesh_pg7eb")
+metadata/rl_src = "MeshInstance3D|0.30,0.41,0.00|0.120,0.120,0.120"
+metadata/rl_fp = "779005170"

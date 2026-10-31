@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/panel.png" id="1_pkgvd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2y26"]
+albedo_color = Color(0.6117647, 0.41960785, 0.27058825, 1)
+albedo_texture = ExtResource("1_pkgvd")
+roughness = 0.88
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_i6qre"]
+size = Vector3(12.600002, 1.8, 0.05)
+
+[node name="Fence23" type="MeshInstance3D" unique_id=1405646060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, 0.95, -12)
+material_override = SubResource("StandardMaterial3D_b2y26")
+mesh = SubResource("BoxMesh_i6qre")
+metadata/rl_src = "fence23"
+metadata/rl_fp = "4258122723"

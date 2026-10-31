@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/grass.png" id="1_i6xbe"]
+[ext_resource type="Texture2D" path="res://assets/textures/asphalt.png" id="2_p4gcb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcvcd"]
+albedo_texture = ExtResource("1_i6xbe")
+roughness = 0.88
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_dya46"]
+size = Vector3(9.759999, 0.1, 10.24)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x47m3"]
+albedo_color = Color(0.33333334, 0.32941177, 0.36078432, 1)
+albedo_texture = ExtResource("2_p4gcb")
+roughness = 0.88
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_at6qr"]
+size = Vector3(6, 0.04, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xs8r"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_ngk83"]
+size = Vector3(0.1, 0.04, 5.5)
+
+[node name="Structure" type="Node3D" unique_id=815451676]
+metadata/rl_kids = ["StaticBody3D|0.00,0.00,0.00|", "MeshInstance3D|19.00,-0.01,-20.90|6.000,0.040,9.000", "MeshInstance3D|16.50,-0.01,-20.15|0.100,0.040,5.500", "MeshInstance3D|21.50,-0.01,-20.15|0.100,0.040,5.500", "Label3D|19.00,0.01,-17.40|POLICE
+ONLY"]
+metadata/rl_fp = "2404196493"
+
+[node name="Solid1" type="Node3D" parent="." unique_id=1167025206]
+metadata/rl_src = "StaticBody3D|0.00,0.00,0.00|"
+metadata/rl_kids = ["MeshInstance3D|20.00,-0.08,-20.40|9.760,0.100,10.240"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="Solid1" unique_id=695052908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.075, -20.400002)
+material_override = SubResource("StandardMaterial3D_lcvcd")
+mesh = SubResource("BoxMesh_dya46")
+metadata/rl_src = "MeshInstance3D|20.00,-0.08,-20.40|9.760,0.100,10.240"
+metadata/rl_fp = "2906029315"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=200360328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.012, -20.9)
+material_override = SubResource("StandardMaterial3D_x47m3")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_at6qr")
+metadata/rl_src = "MeshInstance3D|19.00,-0.01,-20.90|6.000,0.040,9.000"
+metadata/rl_fp = "303618750"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=608417832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, -0.009, -20.15)
+material_override = SubResource("StandardMaterial3D_4xs8r")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ngk83")
+metadata/rl_src = "MeshInstance3D|16.50,-0.01,-20.15|0.100,0.040,5.500"
+metadata/rl_fp = "2679948782"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=281002627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -0.009, -20.15)
+material_override = SubResource("StandardMaterial3D_4xs8r")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ngk83")
+metadata/rl_src = "MeshInstance3D|21.50,-0.01,-20.15|0.100,0.040,5.500"
+metadata/rl_fp = "969655562"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=772322211]
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 19, 0.012, -17.4)
+pixel_size = 0.006
+double_sided = false
+modulate = Color(0.9843137, 0.94509804, 0.8627451, 1)
+text = "POLICE
+ONLY"
+font_size = 64
+metadata/rl_src = "Label3D|19.00,0.01,-17.40|POLICE
+ONLY"
+metadata/rl_fp = "3111786266"

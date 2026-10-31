@@ -1,0 +1,67 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txspt"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_6vp7s"]
+size = Vector3(1.6, 1.1, 0.08)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kds8q"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_w2blc"]
+size = Vector3(1.4, 0.9, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbem4"]
+albedo_color = Color(0.36078432, 0.22745098, 0.14901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_meik1"]
+size = Vector3(0.08, 0.9, 0.06)
+
+[node name="FairBoard" type="Node3D" unique_id=1764370225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.4, 0, 12.7)
+metadata/rl_src = "fair_board"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.40,0.00|1.600,1.100,0.080", "MeshInstance3D|0.00,1.40,0.05|1.400,0.900,0.012", "MeshInstance3D|-0.70,0.45,0.00|0.080,0.900,0.060", "MeshInstance3D|0.70,0.45,0.00|0.080,0.900,0.060", "Label3D|0.00,1.40,0.06|CARNIVAL: JUN 21"]
+metadata/rl_fp = "3532885746"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=445392489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+material_override = SubResource("StandardMaterial3D_txspt")
+mesh = SubResource("BoxMesh_6vp7s")
+metadata/rl_src = "MeshInstance3D|0.00,1.40,0.00|1.600,1.100,0.080"
+metadata/rl_fp = "1938060022"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=356792260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0.046)
+material_override = SubResource("StandardMaterial3D_kds8q")
+mesh = SubResource("BoxMesh_w2blc")
+metadata/rl_src = "MeshInstance3D|0.00,1.40,0.05|1.400,0.900,0.012"
+metadata/rl_fp = "1091453129"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1458803772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_tbem4")
+mesh = SubResource("BoxMesh_meik1")
+metadata/rl_src = "MeshInstance3D|-0.70,0.45,0.00|0.080,0.900,0.060"
+metadata/rl_fp = "2829471594"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1213376819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_tbem4")
+mesh = SubResource("BoxMesh_meik1")
+metadata/rl_src = "MeshInstance3D|0.70,0.45,0.00|0.080,0.900,0.060"
+metadata/rl_fp = "957840925"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=60153376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0.06)
+pixel_size = 0.0028
+double_sided = false
+modulate = Color(0.16470589, 0.11764706, 0.101960786, 1)
+text = "CARNIVAL: JUN 21-24
+CIRCUS: OCT 11-13"
+font_size = 40
+metadata/rl_src = "Label3D|0.00,1.40,0.06|CARNIVAL: JUN 21"
+metadata/rl_fp = "1926162636"

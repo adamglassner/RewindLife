@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73ca5"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_62126"]
+size = Vector3(0.05, 1.6, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31vds"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_forqx"]
+size = Vector3(0.7, 0.9, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e37nk"]
+albedo_color = Color(0.9098039, 0.3529412, 0.47843137, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_728ko"]
+size = Vector3(0.3, 0.3, 0.006)
+
+[node name="Easel1" type="Node3D" unique_id=742168263]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18, 0, -55)
+metadata/rl_src = "easel_1"
+metadata/rl_kids = ["MeshInstance3D|-0.30,0.80,0.00|0.050,1.600,0.050", "MeshInstance3D|0.30,0.80,0.00|0.050,1.600,0.050", "MeshInstance3D|0.00,1.35,0.04|0.700,0.900,0.030", "MeshInstance3D|0.10,1.40,0.06|0.300,0.300,0.006"]
+metadata/rl_fp = "265314503"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1157754060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.8, 0)
+material_override = SubResource("StandardMaterial3D_73ca5")
+mesh = SubResource("BoxMesh_62126")
+metadata/rl_src = "MeshInstance3D|-0.30,0.80,0.00|0.050,1.600,0.050"
+metadata/rl_fp = "991261177"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1063898053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.8, 0)
+material_override = SubResource("StandardMaterial3D_73ca5")
+mesh = SubResource("BoxMesh_62126")
+metadata/rl_src = "MeshInstance3D|0.30,0.80,0.00|0.050,1.600,0.050"
+metadata/rl_fp = "3414597804"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=885880064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.04)
+material_override = SubResource("StandardMaterial3D_31vds")
+mesh = SubResource("BoxMesh_forqx")
+metadata/rl_src = "MeshInstance3D|0.00,1.35,0.04|0.700,0.900,0.030"
+metadata/rl_fp = "1046681273"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1302902057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1.4, 0.058)
+material_override = SubResource("StandardMaterial3D_e37nk")
+mesh = SubResource("BoxMesh_728ko")
+metadata/rl_src = "MeshInstance3D|0.10,1.40,0.06|0.300,0.300,0.006"
+metadata/rl_fp = "2507253674"

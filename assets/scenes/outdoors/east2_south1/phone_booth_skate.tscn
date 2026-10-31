@@ -1,0 +1,101 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ogx4"]
+albedo_color = Color(0.5411765, 0.5568628, 0.5803922, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_jynxh"]
+size = Vector3(0.12, 2.1, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnx0o"]
+albedo_color = Color(0.78431374, 0.8, 0.8156863, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_h0cak"]
+size = Vector3(0.7, 0.9, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hlqud"]
+albedo_color = Color(0.22745098, 0.24313726, 0.26666668, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_tj8o6"]
+size = Vector3(0.6, 0.78, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dadud"]
+albedo_color = Color(0.65882355, 0.6745098, 0.6901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_eexn7"]
+size = Vector3(0.3, 0.46, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urm4t"]
+albedo_color = Color(0.16470589, 0.11764706, 0.101960786, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqm1p"]
+size = Vector3(0.07, 0.28, 0.07)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvleb"]
+albedo_color = Color(0.18039216, 0.36862746, 0.61960787, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_g3ere"]
+size = Vector3(0.74, 0.14, 0.52)
+
+[node name="PhoneBoothSkate" type="Node3D" unique_id=631272935]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 65.8, 0, 43.3)
+metadata/rl_src = "phone_booth_skate"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.05,-0.20|0.120,2.100,0.120", "MeshInstance3D|0.00,1.55,-0.04|0.700,0.900,0.500", "MeshInstance3D|0.00,1.50,0.21|0.600,0.780,0.020", "MeshInstance3D|0.00,1.42,0.15|0.300,0.460,0.120", "MeshInstance3D|-0.21,1.40,0.19|0.070,0.280,0.070", "MeshInstance3D|0.00,2.08,-0.04|0.740,0.140,0.520", "Label3D|0.00,2.08,0.23|PHONE"]
+metadata/rl_fp = "1359385444"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=2002245597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, -0.2)
+material_override = SubResource("StandardMaterial3D_6ogx4")
+mesh = SubResource("BoxMesh_jynxh")
+metadata/rl_src = "MeshInstance3D|0.00,1.05,-0.20|0.120,2.100,0.120"
+metadata/rl_fp = "3294660875"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=918909821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, -0.04)
+material_override = SubResource("StandardMaterial3D_lnx0o")
+mesh = SubResource("BoxMesh_h0cak")
+metadata/rl_src = "MeshInstance3D|0.00,1.55,-0.04|0.700,0.900,0.500"
+metadata/rl_fp = "4214959899"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=194358668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.21)
+material_override = SubResource("StandardMaterial3D_hlqud")
+mesh = SubResource("BoxMesh_tj8o6")
+metadata/rl_src = "MeshInstance3D|0.00,1.50,0.21|0.600,0.780,0.020"
+metadata/rl_fp = "1904460358"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=361390127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42, 0.15)
+material_override = SubResource("StandardMaterial3D_dadud")
+mesh = SubResource("BoxMesh_eexn7")
+metadata/rl_src = "MeshInstance3D|0.00,1.42,0.15|0.300,0.460,0.120"
+metadata/rl_fp = "1137723270"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=32801307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21, 1.4, 0.19)
+material_override = SubResource("StandardMaterial3D_urm4t")
+mesh = SubResource("BoxMesh_jqm1p")
+metadata/rl_src = "MeshInstance3D|-0.21,1.40,0.19|0.070,0.280,0.070"
+metadata/rl_fp = "1542252610"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=1638926484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08, -0.04)
+material_override = SubResource("StandardMaterial3D_gvleb")
+mesh = SubResource("BoxMesh_g3ere")
+metadata/rl_src = "MeshInstance3D|0.00,2.08,-0.04|0.740,0.140,0.520"
+metadata/rl_fp = "2926974371"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=256837012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08, 0.226)
+pixel_size = 0.0025
+double_sided = false
+modulate = Color(0.9843137, 0.94509804, 0.8627451, 1)
+text = "PHONE"
+font_size = 40
+metadata/rl_src = "Label3D|0.00,2.08,0.23|PHONE"
+metadata/rl_fp = "264135083"

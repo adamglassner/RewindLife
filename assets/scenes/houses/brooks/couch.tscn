@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/plaid.png" id="1_4ypk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24k3m"]
+albedo_color = Color(0.5411765, 0.22745098, 0.3529412, 1)
+albedo_texture = ExtResource("1_4ypk1")
+roughness = 0.88
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_1clsv"]
+size = Vector3(1.9, 0.42, 0.85)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gkih"]
+albedo_color = Color(0.48705885, 0.20470588, 0.31764707, 1)
+albedo_texture = ExtResource("1_4ypk1")
+roughness = 0.88
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_brkxs"]
+size = Vector3(1.86, 0.5, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e018"]
+albedo_color = Color(0.46000004, 0.19333334, 0.3, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_veio5"]
+size = Vector3(0.2, 0.62, 0.87)
+
+[node name="Couch" type="Node3D" unique_id=396647435]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.57, 0, 5.8)
+metadata/rl_src = "brooks_couch"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.21,0.00|1.900,0.420,0.850", "MeshInstance3D|0.00,0.62,-0.31|1.860,0.500,0.220", "MeshInstance3D|-0.87,0.31,0.00|0.200,0.620,0.870", "MeshInstance3D|0.87,0.31,0.00|0.200,0.620,0.870"]
+metadata/rl_fp = "2695959651"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=154285327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21, 0)
+material_override = SubResource("StandardMaterial3D_24k3m")
+mesh = SubResource("BoxMesh_1clsv")
+metadata/rl_src = "MeshInstance3D|0.00,0.21,0.00|1.900,0.420,0.850"
+metadata/rl_fp = "3319695034"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1566286856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, -0.305)
+material_override = SubResource("StandardMaterial3D_7gkih")
+mesh = SubResource("BoxMesh_brkxs")
+metadata/rl_src = "MeshInstance3D|0.00,0.62,-0.31|1.860,0.500,0.220"
+metadata/rl_fp = "2185707954"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1761850461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87, 0.31, 0)
+material_override = SubResource("StandardMaterial3D_8e018")
+mesh = SubResource("BoxMesh_veio5")
+metadata/rl_src = "MeshInstance3D|-0.87,0.31,0.00|0.200,0.620,0.870"
+metadata/rl_fp = "3521633389"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=688990248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87, 0.31, 0)
+material_override = SubResource("StandardMaterial3D_8e018")
+mesh = SubResource("BoxMesh_veio5")
+metadata/rl_src = "MeshInstance3D|0.87,0.31,0.00|0.200,0.620,0.870"
+metadata/rl_fp = "1419333632"

@@ -1,0 +1,107 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bol0"]
+albedo_color = Color(0.101960786, 0.078431375, 0.14117648, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kr2pw"]
+size = Vector3(0.7, 1.8, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba7ua"]
+albedo_color = Color(0.22411764, 0.3952941, 0.21529411, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_0sdkq"]
+size = Vector3(0.72, 1, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4ghv"]
+albedo_color = Color(0.49803922, 0.8784314, 0.47843137, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.49803922, 0.8784314, 0.47843137, 1)
+emission_energy_multiplier = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_773po"]
+size = Vector3(0.5, 0.42, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77j4a"]
+albedo_color = Color(0.49803922, 0.8784314, 0.47843137, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.49803922, 0.8784314, 0.47843137, 1)
+emission_energy_multiplier = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ogfb"]
+size = Vector3(0.66, 0.16, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6arm"]
+albedo_color = Color(0.2901961, 0.2, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_ytdgv"]
+size = Vector3(0.66, 0.06, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va4w8"]
+albedo_color = Color(0.89411765, 0.4392157, 0.30980393, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkudc"]
+size = Vector3(0.05, 0.08, 0.05)
+
+[node name="Wall4" type="Node3D" unique_id=164652072]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47.5, 0, 58.5)
+metadata/rl_src = "arcade_4"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.90,0.00|0.700,1.800,0.750", "MeshInstance3D|0.00,0.95,0.01|0.720,1.000,0.600", "MeshInstance3D|0.00,1.35,0.31|0.500,0.420,0.012", "MeshInstance3D|0.00,1.88,0.32|0.660,0.160,0.050", "MeshInstance3D|0.00,1.00,0.45|0.660,0.060,0.250", "MeshInstance3D|-0.15,1.07,0.47|0.050,0.080,0.050", "Label3D|0.00,1.88,0.35|KUNG FU ALLEY"]
+metadata/rl_fp = "1679609884"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=948298776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_0bol0")
+mesh = SubResource("BoxMesh_kr2pw")
+metadata/rl_src = "MeshInstance3D|0.00,0.90,0.00|0.700,1.800,0.750"
+metadata/rl_fp = "2619458154"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=803675679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0.01)
+material_override = SubResource("StandardMaterial3D_ba7ua")
+mesh = SubResource("BoxMesh_0sdkq")
+metadata/rl_src = "MeshInstance3D|0.00,0.95,0.01|0.720,1.000,0.600"
+metadata/rl_fp = "1787935998"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=877400831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.31)
+material_override = SubResource("StandardMaterial3D_j4ghv")
+mesh = SubResource("BoxMesh_773po")
+metadata/rl_src = "MeshInstance3D|0.00,1.35,0.31|0.500,0.420,0.012"
+metadata/rl_fp = "1974368082"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1466949223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88, 0.32)
+material_override = SubResource("StandardMaterial3D_77j4a")
+mesh = SubResource("BoxMesh_2ogfb")
+metadata/rl_src = "MeshInstance3D|0.00,1.88,0.32|0.660,0.160,0.050"
+metadata/rl_fp = "2018529992"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=987812611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.45)
+material_override = SubResource("StandardMaterial3D_b6arm")
+mesh = SubResource("BoxMesh_ytdgv")
+metadata/rl_src = "MeshInstance3D|0.00,1.00,0.45|0.660,0.060,0.250"
+metadata/rl_fp = "1928053307"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=1116988018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.07, 0.47)
+material_override = SubResource("StandardMaterial3D_va4w8")
+mesh = SubResource("BoxMesh_rkudc")
+metadata/rl_src = "MeshInstance3D|-0.15,1.07,0.47|0.050,0.080,0.050"
+metadata/rl_fp = "3377615419"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=1251894927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88, 0.35)
+pixel_size = 0.0035
+modulate = Color(0.9843137, 0.94509804, 0.8627451, 1)
+text = "KUNG FU ALLEY"
+font_size = 40
+outline_size = 6
+metadata/rl_src = "Label3D|0.00,1.88,0.35|KUNG FU ALLEY"
+metadata/rl_fp = "1569638413"

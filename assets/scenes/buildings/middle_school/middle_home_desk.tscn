@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4h2b"]
+albedo_color = Color(0.78431374, 0.627451, 0.4392157, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_aduwl"]
+size = Vector3(0.7, 0.05, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3g23q"]
+albedo_color = Color(0.8117647, 0.7764706, 0.70980394, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_dpy3b"]
+size = Vector3(0.06, 0.68, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7ypp"]
+albedo_color = Color(0.18039216, 0.36862746, 0.61960787, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_7r6os"]
+size = Vector3(0.45, 0.45, 0.42)
+
+[node name="MiddleHomeDesk" type="Node3D" unique_id=61914191]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 91.86666, 0, -52.535)
+metadata/rl_src = "middle_home_desk"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.70,0.00|0.700,0.050,0.500", "MeshInstance3D|0.00,0.34,0.00|0.060,0.680,0.060", "MeshInstance3D|0.00,0.22,-0.50|0.450,0.450,0.420"]
+metadata/rl_fp = "4046680029"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1828176842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_f4h2b")
+mesh = SubResource("BoxMesh_aduwl")
+metadata/rl_src = "MeshInstance3D|0.00,0.70,0.00|0.700,0.050,0.500"
+metadata/rl_fp = "1981011851"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1048121607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, 0)
+material_override = SubResource("StandardMaterial3D_3g23q")
+mesh = SubResource("BoxMesh_dpy3b")
+metadata/rl_src = "MeshInstance3D|0.00,0.34,0.00|0.060,0.680,0.060"
+metadata/rl_fp = "4071495147"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1641287048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, -0.5)
+material_override = SubResource("StandardMaterial3D_q7ypp")
+mesh = SubResource("BoxMesh_7r6os")
+metadata/rl_src = "MeshInstance3D|0.00,0.22,-0.50|0.450,0.450,0.420"
+metadata/rl_fp = "3011596804"

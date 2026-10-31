@@ -1,0 +1,85 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dpc8"]
+albedo_color = Color(0.72156864, 0.5411765, 0.3529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_4o4ts"]
+size = Vector3(1.8, 1.1, 0.04)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgknm"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_msva1"]
+size = Vector3(0.3, 0.4, 0.008)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hrjv"]
+albedo_color = Color(0.96862745, 0.9137255, 0.6039216, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpfwy"]
+albedo_color = Color(0.7490196, 0.8784314, 0.93333334, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjfjg"]
+albedo_color = Color(0.9490196, 0.627451, 0.70980394, 1)
+roughness = 0.88
+
+[node name="TownBulletin" type="Node3D" unique_id=1429085220]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.905, 0, -44.5)
+metadata/rl_src = "town_bulletin"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.60,0.00|1.800,1.100,0.040", "MeshInstance3D|-0.66,1.75,0.02|0.300,0.400,0.008", "MeshInstance3D|-0.33,1.45,0.02|0.300,0.400,0.008", "MeshInstance3D|0.00,1.75,0.02|0.300,0.400,0.008", "MeshInstance3D|0.33,1.45,0.02|0.300,0.400,0.008", "MeshInstance3D|0.66,1.75,0.02|0.300,0.400,0.008", "Label3D|0.00,2.05,0.03|TOWN NEWS"]
+metadata/rl_fp = "4286951731"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=580384550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_4dpc8")
+mesh = SubResource("BoxMesh_4o4ts")
+metadata/rl_src = "MeshInstance3D|0.00,1.60,0.00|1.800,1.100,0.040"
+metadata/rl_fp = "2868880988"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=623400536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66, 1.75, 0.024)
+material_override = SubResource("StandardMaterial3D_dgknm")
+mesh = SubResource("BoxMesh_msva1")
+metadata/rl_src = "MeshInstance3D|-0.66,1.75,0.02|0.300,0.400,0.008"
+metadata/rl_fp = "1153649668"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=111924856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33, 1.45, 0.024)
+material_override = SubResource("StandardMaterial3D_1hrjv")
+mesh = SubResource("BoxMesh_msva1")
+metadata/rl_src = "MeshInstance3D|-0.33,1.45,0.02|0.300,0.400,0.008"
+metadata/rl_fp = "571912412"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=529554523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0.024)
+material_override = SubResource("StandardMaterial3D_tpfwy")
+mesh = SubResource("BoxMesh_msva1")
+metadata/rl_src = "MeshInstance3D|0.00,1.75,0.02|0.300,0.400,0.008"
+metadata/rl_fp = "3176017610"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=701544086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33, 1.45, 0.024)
+material_override = SubResource("StandardMaterial3D_dgknm")
+mesh = SubResource("BoxMesh_msva1")
+metadata/rl_src = "MeshInstance3D|0.33,1.45,0.02|0.300,0.400,0.008"
+metadata/rl_fp = "954819054"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=1903903666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66, 1.75, 0.024)
+material_override = SubResource("StandardMaterial3D_fjfjg")
+mesh = SubResource("BoxMesh_msva1")
+metadata/rl_src = "MeshInstance3D|0.66,1.75,0.02|0.300,0.400,0.008"
+metadata/rl_fp = "2385001287"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=296540655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05, 0.03)
+pixel_size = 0.0028
+double_sided = false
+modulate = Color(0.16470589, 0.11764706, 0.101960786, 1)
+text = "TOWN NEWS"
+font_size = 48
+metadata/rl_src = "Label3D|0.00,2.05,0.03|TOWN NEWS"
+metadata/rl_fp = "964180117"

@@ -1,0 +1,107 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5q5ds"]
+albedo_color = Color(0.101960786, 0.078431375, 0.14117648, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_t1wwm"]
+size = Vector3(0.7, 1.8, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4umij"]
+albedo_color = Color(0.35117647, 0.22058824, 0.45, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_2u6co"]
+size = Vector3(0.72, 1, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdsv0"]
+albedo_color = Color(0.78039217, 0.49019608, 1, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.78039217, 0.49019608, 1, 1)
+emission_energy_multiplier = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_uqnjn"]
+size = Vector3(0.5, 0.42, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctrh"]
+albedo_color = Color(0.78039217, 0.49019608, 1, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.78039217, 0.49019608, 1, 1)
+emission_energy_multiplier = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_0lgtc"]
+size = Vector3(0.66, 0.16, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufqpn"]
+albedo_color = Color(0.2901961, 0.2, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_a6e68"]
+size = Vector3(0.66, 0.06, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwuyo"]
+albedo_color = Color(0.89411765, 0.4392157, 0.30980393, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_h77dg"]
+size = Vector3(0.05, 0.08, 0.05)
+
+[node name="Wall6" type="Node3D" unique_id=1514584457]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47.5, 0, 62.9)
+metadata/rl_src = "arcade_6"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.90,0.00|0.700,1.800,0.750", "MeshInstance3D|0.00,0.95,0.01|0.720,1.000,0.600", "MeshInstance3D|0.00,1.35,0.31|0.500,0.420,0.012", "MeshInstance3D|0.00,1.88,0.32|0.660,0.160,0.050", "MeshInstance3D|0.00,1.00,0.45|0.660,0.060,0.250", "MeshInstance3D|-0.15,1.07,0.47|0.050,0.080,0.050", "Label3D|0.00,1.88,0.35|DRAGON TOWER"]
+metadata/rl_fp = "3019292763"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1696542890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_5q5ds")
+mesh = SubResource("BoxMesh_t1wwm")
+metadata/rl_src = "MeshInstance3D|0.00,0.90,0.00|0.700,1.800,0.750"
+metadata/rl_fp = "2619458154"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1633496446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0.01)
+material_override = SubResource("StandardMaterial3D_4umij")
+mesh = SubResource("BoxMesh_2u6co")
+metadata/rl_src = "MeshInstance3D|0.00,0.95,0.01|0.720,1.000,0.600"
+metadata/rl_fp = "2717712884"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=570211919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.31)
+material_override = SubResource("StandardMaterial3D_hdsv0")
+mesh = SubResource("BoxMesh_uqnjn")
+metadata/rl_src = "MeshInstance3D|0.00,1.35,0.31|0.500,0.420,0.012"
+metadata/rl_fp = "924906954"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=949542515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88, 0.32)
+material_override = SubResource("StandardMaterial3D_8ctrh")
+mesh = SubResource("BoxMesh_0lgtc")
+metadata/rl_src = "MeshInstance3D|0.00,1.88,0.32|0.660,0.160,0.050"
+metadata/rl_fp = "2167738304"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=228804260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.45)
+material_override = SubResource("StandardMaterial3D_ufqpn")
+mesh = SubResource("BoxMesh_a6e68")
+metadata/rl_src = "MeshInstance3D|0.00,1.00,0.45|0.660,0.060,0.250"
+metadata/rl_fp = "1928053307"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=1263514099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.07, 0.47)
+material_override = SubResource("StandardMaterial3D_rwuyo")
+mesh = SubResource("BoxMesh_h77dg")
+metadata/rl_src = "MeshInstance3D|-0.15,1.07,0.47|0.050,0.080,0.050"
+metadata/rl_fp = "3377615419"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=948186749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88, 0.35)
+pixel_size = 0.0035
+modulate = Color(0.9843137, 0.94509804, 0.8627451, 1)
+text = "DRAGON TOWER"
+font_size = 40
+outline_size = 6
+metadata/rl_src = "Label3D|0.00,1.88,0.35|DRAGON TOWER"
+metadata/rl_fp = "770615602"

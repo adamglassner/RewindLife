@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kc24p"]
+albedo_color = Color(0.2901961, 0.2, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_oowi2"]
+size = Vector3(0.3, 0.04, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0s5e"]
+albedo_color = Color(0.8901961, 0.6627451, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_h5whg"]
+size = Vector3(0.04, 1.4, 0.04)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gdpw"]
+albedo_color = Color(0.9490196, 0.8352941, 0.5411765, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.9490196, 0.8352941, 0.5411765, 1)
+emission_energy_multiplier = 0.096
+
+[sub_resource type="BoxMesh" id="BoxMesh_le7er"]
+size = Vector3(0.38, 0.3, 0.38)
+
+[node name="FloorLamp3" type="Node3D" unique_id=1273630626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35, 0, 28.35)
+metadata/rl_src = "kowalskis_floor_lamp_3"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.02,0.00|0.300,0.040,0.300", "MeshInstance3D|0.00,0.72,0.00|0.040,1.400,0.040", "MeshInstance3D|0.00,1.55,0.00|0.380,0.300,0.380"]
+metadata/rl_fp = "1161677511"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1660635284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+material_override = SubResource("StandardMaterial3D_kc24p")
+mesh = SubResource("BoxMesh_oowi2")
+metadata/rl_src = "MeshInstance3D|0.00,0.02,0.00|0.300,0.040,0.300"
+metadata/rl_fp = "2116859492"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=128687475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72, 0)
+material_override = SubResource("StandardMaterial3D_h0s5e")
+mesh = SubResource("BoxMesh_h5whg")
+metadata/rl_src = "MeshInstance3D|0.00,0.72,0.00|0.040,1.400,0.040"
+metadata/rl_fp = "937826879"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1631262754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+material_override = SubResource("StandardMaterial3D_5gdpw")
+mesh = SubResource("BoxMesh_le7er")
+metadata/rl_src = "MeshInstance3D|0.00,1.55,0.00|0.380,0.300,0.380"
+metadata/rl_fp = "1562622242"

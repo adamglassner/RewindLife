@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kmfm"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kbaqp"]
+size = Vector3(0.8, 0.018, 0.5)
+
+[node name="MillersPorch" type="Node3D" unique_id=478145749]
+metadata/rl_src = "millers_porch"
+metadata/rl_kids = ["MeshInstance3D|49.10,0.04,8.60|0.800,0.018,0.500"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1431558453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.1, 0.036, 8.6)
+material_override = SubResource("StandardMaterial3D_6kmfm")
+mesh = SubResource("BoxMesh_kbaqp")
+metadata/rl_src = "MeshInstance3D|49.10,0.04,8.60|0.800,0.018,0.500"
+metadata/rl_fp = "4020014967"

@@ -1,0 +1,83 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wum70"]
+albedo_color = Color(0.65882355, 0.6745098, 0.6901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_sxfck"]
+size = Vector3(0.38, 0.62, 0.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftvgf"]
+albedo_color = Color(0.2901961, 0.2901961, 0.32156864, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_81fi3"]
+size = Vector3(0.24, 0.2, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6thx"]
+albedo_color = Color(0.16470589, 0.11764706, 0.101960786, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_xys01"]
+size = Vector3(0.08, 0.32, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_duvbx"]
+size = Vector3(0.02, 0.36, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqth6"]
+albedo_color = Color(0.18039216, 0.36862746, 0.61960787, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_j1r75"]
+size = Vector3(0.3, 0.12, 0.012)
+
+[node name="PayphoneMall1" type="Node3D" unique_id=1896246448]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 74.075, 0, 79.5)
+metadata/rl_src = "payphone_mall_1"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.38,0.09|0.380,0.620,0.160", "MeshInstance3D|0.00,1.48,0.18|0.240,0.200,0.020", "MeshInstance3D|-0.25,1.36,0.11|0.080,0.320,0.080", "MeshInstance3D|-0.22,1.02,0.14|0.020,0.360,0.020", "MeshInstance3D|0.00,1.82,0.02|0.300,0.120,0.012", "Label3D|0.00,1.82,0.03|PHONE"]
+metadata/rl_fp = "1942369958"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1398401580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38, 0.09)
+material_override = SubResource("StandardMaterial3D_wum70")
+mesh = SubResource("BoxMesh_sxfck")
+metadata/rl_src = "MeshInstance3D|0.00,1.38,0.09|0.380,0.620,0.160"
+metadata/rl_fp = "12789704"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=2075295436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48, 0.179)
+material_override = SubResource("StandardMaterial3D_ftvgf")
+mesh = SubResource("BoxMesh_81fi3")
+metadata/rl_src = "MeshInstance3D|0.00,1.48,0.18|0.240,0.200,0.020"
+metadata/rl_fp = "1591439269"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1396551882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.36, 0.11)
+material_override = SubResource("StandardMaterial3D_r6thx")
+mesh = SubResource("BoxMesh_xys01")
+metadata/rl_src = "MeshInstance3D|-0.25,1.36,0.11|0.080,0.320,0.080"
+metadata/rl_fp = "2779039824"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=40130049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22, 1.02, 0.14)
+material_override = SubResource("StandardMaterial3D_r6thx")
+mesh = SubResource("BoxMesh_duvbx")
+metadata/rl_src = "MeshInstance3D|-0.22,1.02,0.14|0.020,0.360,0.020"
+metadata/rl_fp = "468123969"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=75115801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82, 0.016)
+material_override = SubResource("StandardMaterial3D_uqth6")
+mesh = SubResource("BoxMesh_j1r75")
+metadata/rl_src = "MeshInstance3D|0.00,1.82,0.02|0.300,0.120,0.012"
+metadata/rl_fp = "1436314460"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=563492025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82, 0.026)
+pixel_size = 0.0018
+double_sided = false
+modulate = Color(0.9843137, 0.94509804, 0.8627451, 1)
+text = "PHONE"
+font_size = 40
+metadata/rl_src = "Label3D|0.00,1.82,0.03|PHONE"
+metadata/rl_fp = "4113521240"

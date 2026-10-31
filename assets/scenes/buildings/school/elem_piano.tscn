@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w683t"]
+albedo_color = Color(0.16862746, 0.1254902, 0.1254902, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_x6ib4"]
+size = Vector3(1.5, 1.2, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i05op"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_xaast"]
+size = Vector3(1.4, 0.06, 0.24)
+
+[node name="ElemPiano" type="Node3D" unique_id=1967672571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6, 0, -66.8)
+metadata/rl_src = "elem_piano"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.60,0.00|1.500,1.200,0.600", "MeshInstance3D|0.00,0.78,0.40|1.400,0.060,0.240"]
+metadata/rl_fp = "1643042268"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=500453854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+material_override = SubResource("StandardMaterial3D_w683t")
+mesh = SubResource("BoxMesh_x6ib4")
+metadata/rl_src = "MeshInstance3D|0.00,0.60,0.00|1.500,1.200,0.600"
+metadata/rl_fp = "1627334027"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1126039106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0.4)
+material_override = SubResource("StandardMaterial3D_i05op")
+mesh = SubResource("BoxMesh_xaast")
+metadata/rl_src = "MeshInstance3D|0.00,0.78,0.40|1.400,0.060,0.240"
+metadata/rl_fp = "2904394205"

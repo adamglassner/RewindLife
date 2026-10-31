@@ -1,0 +1,106 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/hall.png" id="1_2a4ov"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmttx"]
+albedo_color = Color(0.9490196, 0.9254902, 0.8666667, 1)
+albedo_texture = ExtResource("1_2a4ov")
+roughness = 0.88
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_4f7q0"]
+size = Vector3(13.925, 4.4, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu1x5"]
+albedo_color = Color(0.36078432, 0.22745098, 0.14901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_oidev"]
+size = Vector3(13.919001, 0.18, 0.17)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjjis"]
+albedo_color = Color(0.96862745, 0.8156863, 0.27450982, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kbv1v"]
+size = Vector3(0.5, 0.7, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ko6qg"]
+size = Vector3(13.925, 0.35, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7axx"]
+size = Vector3(13.965, 0.05, 0.19000001)
+
+[node name="MallWestBack" type="Node3D" unique_id=483959342]
+metadata/rl_src = "mallWestBack"
+metadata/rl_kids = ["Node3D|0.00,0.00,0.00|", "Node3D|0.00,0.00,0.00|#2"]
+metadata/rl_fp = "2404196493"
+
+[node name="Part1" type="Node3D" parent="." unique_id=1840344087]
+metadata/rl_src = "Node3D|0.00,0.00,0.00|"
+metadata/rl_kids = ["MeshInstance3D|81.04,2.20,76.00|13.925,4.400,0.150", "MeshInstance3D|81.04,0.09,76.00|13.919,0.180,0.170", "Node3D|81.00,2.20,75.92|"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="Part1" unique_id=1081367666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0375, 2.2, 76)
+material_override = SubResource("StandardMaterial3D_qmttx")
+mesh = SubResource("BoxMesh_4f7q0")
+metadata/rl_src = "MeshInstance3D|81.04,2.20,76.00|13.925,4.400,0.150"
+metadata/rl_fp = "886279296"
+
+[node name="Box2" type="MeshInstance3D" parent="Part1" unique_id=366147965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0375, 0.09, 76)
+material_override = SubResource("StandardMaterial3D_qu1x5")
+mesh = SubResource("BoxMesh_oidev")
+metadata/rl_src = "MeshInstance3D|81.04,0.09,76.00|13.919,0.180,0.170"
+metadata/rl_fp = "2297013004"
+
+[node name="Part2" type="Node3D" parent="Part1" unique_id=155928873]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 81, 2.2, 75.915)
+metadata/rl_src = "Node3D|81.00,2.20,75.92|"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.500,0.700,0.012", "Label3D|0.00,0.00,0.02|GAME
+KID!
+$45"]
+metadata/rl_fp = "1876831759"
+
+[node name="Box3" type="MeshInstance3D" parent="Part1/Part2" unique_id=1155246745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_wjjis")
+mesh = SubResource("BoxMesh_kbv1v")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.500,0.700,0.012"
+metadata/rl_fp = "2281648480"
+
+[node name="Sign1" type="Label3D" parent="Part1/Part2" unique_id=766418094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.016)
+pixel_size = 0.0028
+double_sided = false
+modulate = Color(0.18039216, 0.36862746, 0.61960787, 1)
+text = "GAME
+KID!
+$45"
+font_size = 40
+metadata/rl_src = "Label3D|0.00,0.00,0.02|GAME
+KID!
+$45"
+metadata/rl_fp = "2338839039"
+
+[node name="Part3" type="Node3D" parent="." unique_id=2058615500]
+metadata/rl_src = "Node3D|0.00,0.00,0.00|#2"
+metadata/rl_kids = ["MeshInstance3D|81.04,0.17,76.00|13.925,0.350,0.150", "MeshInstance3D|81.04,0.38,76.00|13.965,0.050,0.190"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box4" type="MeshInstance3D" parent="Part3" unique_id=855192624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0375, 0.175, 76)
+material_override = SubResource("StandardMaterial3D_qmttx")
+mesh = SubResource("BoxMesh_ko6qg")
+metadata/rl_src = "MeshInstance3D|81.04,0.17,76.00|13.925,0.350,0.150"
+metadata/rl_fp = "652304825"
+
+[node name="Box5" type="MeshInstance3D" parent="Part3" unique_id=501354230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0375, 0.375, 76)
+material_override = SubResource("StandardMaterial3D_qu1x5")
+mesh = SubResource("BoxMesh_p7axx")
+metadata/rl_src = "MeshInstance3D|81.04,0.38,76.00|13.965,0.050,0.190"
+metadata/rl_fp = "2225500609"

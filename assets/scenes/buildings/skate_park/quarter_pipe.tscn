@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqv2p"]
+albedo_color = Color(0.6349804, 0.6211765, 0.5935686, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_pn7hw"]
+size = Vector3(5, 1.6, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l0fp"]
+albedo_color = Color(0.78431374, 0.7058824, 0.5411765, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_hahut"]
+size = Vector3(4.98, 0.16, 2.5)
+
+[node name="QuarterPipe" type="Node3D" unique_id=198829727]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.4, 0, 33)
+metadata/rl_src = "quarter_pipe"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.80,-0.40|5.000,1.600,0.800", "MeshInstance3D|0.00,0.80,0.95|4.980,0.160,2.500"]
+metadata/rl_fp = "3319027536"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1470720608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.4)
+material_override = SubResource("StandardMaterial3D_qqv2p")
+mesh = SubResource("BoxMesh_pn7hw")
+metadata/rl_src = "MeshInstance3D|0.00,0.80,-0.40|5.000,1.600,0.800"
+metadata/rl_fp = "242321620"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=971080585]
+transform = Transform3D(1, 0, 0, 0, 0.7648422, -0.64421767, 0, 0.64421767, 0.7648422, 0, 0.8, 0.95)
+material_override = SubResource("StandardMaterial3D_5l0fp")
+mesh = SubResource("BoxMesh_hahut")
+metadata/rl_src = "MeshInstance3D|0.00,0.80,0.95|4.980,0.160,2.500"
+metadata/rl_fp = "745271556"

@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kba2f"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_sabe0"]
+size = Vector3(1.8, 0.08, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g54wv"]
+albedo_color = Color(0.2901961, 0.2901961, 0.32156864, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_wgu0j"]
+size = Vector3(0.08, 0.42, 0.44)
+
+[node name="SkateBench83" type="Node3D" unique_id=1262002923]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 83.4, 0, 41.65)
+metadata/rl_src = "skate_bench_83"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.45,0.00|1.800,0.080,0.500", "MeshInstance3D|-0.80,0.21,0.00|0.080,0.420,0.440", "MeshInstance3D|0.80,0.21,0.00|0.080,0.420,0.440"]
+metadata/rl_fp = "3663628726"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1055113811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_kba2f")
+mesh = SubResource("BoxMesh_sabe0")
+metadata/rl_src = "MeshInstance3D|0.00,0.45,0.00|1.800,0.080,0.500"
+metadata/rl_fp = "870849775"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=85067484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.21, 0)
+material_override = SubResource("StandardMaterial3D_g54wv")
+mesh = SubResource("BoxMesh_wgu0j")
+metadata/rl_src = "MeshInstance3D|-0.80,0.21,0.00|0.080,0.420,0.440"
+metadata/rl_fp = "1877796539"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=767845353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.21, 0)
+material_override = SubResource("StandardMaterial3D_g54wv")
+mesh = SubResource("BoxMesh_wgu0j")
+metadata/rl_src = "MeshInstance3D|0.80,0.21,0.00|0.080,0.420,0.440"
+metadata/rl_fp = "3781463598"

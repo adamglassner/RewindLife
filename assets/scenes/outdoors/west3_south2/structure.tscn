@@ -1,0 +1,57 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ys0l4"]
+albedo_color = Color(0.8117647, 0.7764706, 0.70980394, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_j1ojm"]
+size = Vector3(0.4, 18, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fi0f"]
+albedo_color = Color(0.72156864, 0.76862746, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_b2k7j"]
+size = Vector3(7, 5, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3312"]
+albedo_color = Color(0.627451, 0.6745098, 0.6901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_bj8a3"]
+size = Vector3(5, 1.6, 5)
+
+[node name="Structure" type="Node3D" unique_id=2098274404]
+metadata/rl_kids = ["MeshInstance3D|-93.00,9.00,93.00|0.400,18.000,0.400", "MeshInstance3D|-95.00,20.50,95.00|7.000,5.000,7.000", "MeshInstance3D|-95.00,23.80,95.00|5.000,1.600,5.000", "Label3D|-95.00,20.50,91.48|MAPLE GROVE"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1971652022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 9, 93)
+material_override = SubResource("StandardMaterial3D_ys0l4")
+mesh = SubResource("BoxMesh_j1ojm")
+metadata/rl_src = "MeshInstance3D|-93.00,9.00,93.00|0.400,18.000,0.400"
+metadata/rl_fp = "371466873"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1898921932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 20.5, 95)
+material_override = SubResource("StandardMaterial3D_3fi0f")
+mesh = SubResource("BoxMesh_b2k7j")
+metadata/rl_src = "MeshInstance3D|-95.00,20.50,95.00|7.000,5.000,7.000"
+metadata/rl_fp = "896235867"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1112520637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 23.8, 95)
+material_override = SubResource("StandardMaterial3D_n3312")
+mesh = SubResource("BoxMesh_bj8a3")
+metadata/rl_src = "MeshInstance3D|-95.00,23.80,95.00|5.000,1.600,5.000"
+metadata/rl_fp = "2189841017"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=24559456]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -95, 20.5, 91.48)
+pixel_size = 0.01
+double_sided = false
+modulate = Color(0.18039216, 0.36862746, 0.61960787, 1)
+text = "MAPLE GROVE"
+font_size = 220
+metadata/rl_src = "Label3D|-95.00,20.50,91.48|MAPLE GROVE"
+metadata/rl_fp = "2413826353"

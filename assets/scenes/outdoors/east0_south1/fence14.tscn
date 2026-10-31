@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/panel.png" id="1_ptfc6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8sm14"]
+albedo_color = Color(0.6117647, 0.41960785, 0.27058825, 1)
+albedo_texture = ExtResource("1_ptfc6")
+roughness = 0.88
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_heudd"]
+size = Vector3(0.05, 1.8, 4.5)
+
+[node name="Fence14" type="MeshInstance3D" unique_id=1685891279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.95, 40.75)
+material_override = SubResource("StandardMaterial3D_8sm14")
+mesh = SubResource("BoxMesh_heudd")
+metadata/rl_src = "fence14"
+metadata/rl_fp = "1841511758"

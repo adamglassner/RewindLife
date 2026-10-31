@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0q0q"]
+albedo_color = Color(0.30980393, 0.6901961, 0.8784314, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_0tk8e"]
+size = Vector3(1.8, 0.3, 1.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojhrd"]
+albedo_color = Color(0.7490196, 0.9098039, 0.96862745, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_u57dq"]
+size = Vector3(1.6, 0.02, 1.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_weyiv"]
+albedo_color = Color(0.8901961, 0.6627451, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_33yvs"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[node name="GarciasPool" type="Node3D" unique_id=284609157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.95, 0, -7.275)
+metadata/rl_src = "garcias_pool"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.15,0.00|1.800,0.300,1.800", "MeshInstance3D|0.00,0.28,0.00|1.600,0.020,1.600", "MeshInstance3D|0.50,0.42,0.30|0.300,0.300,0.300"]
+metadata/rl_fp = "1510436579"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1455873751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+material_override = SubResource("StandardMaterial3D_v0q0q")
+mesh = SubResource("BoxMesh_0tk8e")
+metadata/rl_src = "MeshInstance3D|0.00,0.15,0.00|1.800,0.300,1.800"
+metadata/rl_fp = "2870602034"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1110025494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("StandardMaterial3D_ojhrd")
+mesh = SubResource("BoxMesh_u57dq")
+metadata/rl_src = "MeshInstance3D|0.00,0.28,0.00|1.600,0.020,1.600"
+metadata/rl_fp = "1868240860"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=157227488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.42, 0.3)
+material_override = SubResource("StandardMaterial3D_weyiv")
+mesh = SubResource("BoxMesh_33yvs")
+metadata/rl_src = "MeshInstance3D|0.50,0.42,0.30|0.300,0.300,0.300"
+metadata/rl_fp = "716391872"

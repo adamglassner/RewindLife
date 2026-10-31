@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8ywp"]
+albedo_color = Color(0.95686275, 0.9019608, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_68j0n"]
+size = Vector3(0.085, 0.13, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl7ke"]
+albedo_color = Color(0.84705883, 0.8156863, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_c5ssh"]
+size = Vector3(0.022, 0.045, 0.014)
+
+[node name="SwitchKowalskisKitchen" type="Node3D" unique_id=1191360144]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.783, 0, 31.08)
+metadata/rl_src = "switch_kowalskis_kitchen"
+metadata/rl_kids = ["Plate"]
+metadata/rl_fp = "3312605238"
+
+[node name="Plate" type="Node3D" parent="." unique_id=1397451862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+metadata/rl_src = "Plate"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012", "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"]
+metadata/rl_fp = "3148425057"
+
+[node name="Box1" type="MeshInstance3D" parent="Plate" unique_id=1604987868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_w8ywp")
+mesh = SubResource("BoxMesh_68j0n")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012"
+metadata/rl_fp = "3552524831"
+
+[node name="Box2" type="MeshInstance3D" parent="Plate" unique_id=511624959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012, 0.019)
+material_override = SubResource("StandardMaterial3D_cl7ke")
+mesh = SubResource("BoxMesh_c5ssh")
+metadata/rl_src = "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"
+metadata/rl_fp = "127491398"

@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_438xr"]
+albedo_color = Color(0.95686275, 0.9019608, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejys6"]
+size = Vector3(0.085, 0.13, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuc20"]
+albedo_color = Color(0.84705883, 0.8156863, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_d6bto"]
+size = Vector3(0.022, 0.045, 0.014)
+
+[node name="SwitchTownPixelPalaceArcade" type="Node3D" unique_id=227160098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.08, 0, 56.083)
+metadata/rl_src = "switch_town_pixel_palace_arcade"
+metadata/rl_kids = ["Plate"]
+metadata/rl_fp = "189950051"
+
+[node name="Plate" type="Node3D" parent="." unique_id=1671946447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+metadata/rl_src = "Plate"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012", "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"]
+metadata/rl_fp = "2869187120"
+
+[node name="Box1" type="MeshInstance3D" parent="Plate" unique_id=2008630120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_438xr")
+mesh = SubResource("BoxMesh_ejys6")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012"
+metadata/rl_fp = "3552524831"
+
+[node name="Box2" type="MeshInstance3D" parent="Plate" unique_id=56612346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012, 0.019)
+material_override = SubResource("StandardMaterial3D_kuc20")
+mesh = SubResource("BoxMesh_d6bto")
+metadata/rl_src = "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"
+metadata/rl_fp = "127491398"

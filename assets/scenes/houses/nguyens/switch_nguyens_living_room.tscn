@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3a7w"]
+albedo_color = Color(0.95686275, 0.9019608, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_j21un"]
+size = Vector3(0.085, 0.13, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yrky"]
+albedo_color = Color(0.84705883, 0.8156863, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_bnl3t"]
+size = Vector3(0.022, 0.045, 0.014)
+
+[node name="SwitchNguyensLivingRoom" type="Node3D" unique_id=1904078086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.155, 0, 28.083)
+metadata/rl_src = "switch_nguyens_living_room"
+metadata/rl_kids = ["Plate"]
+metadata/rl_fp = "3418050561"
+
+[node name="Plate" type="Node3D" parent="." unique_id=2109281364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+metadata/rl_src = "Plate"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012", "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"]
+metadata/rl_fp = "2869187120"
+
+[node name="Box1" type="MeshInstance3D" parent="Plate" unique_id=200654642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_n3a7w")
+mesh = SubResource("BoxMesh_j21un")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012"
+metadata/rl_fp = "3552524831"
+
+[node name="Box2" type="MeshInstance3D" parent="Plate" unique_id=434179607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012, 0.019)
+material_override = SubResource("StandardMaterial3D_8yrky")
+mesh = SubResource("BoxMesh_bnl3t")
+metadata/rl_src = "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"
+metadata/rl_fp = "127491398"

@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6454"]
+albedo_color = Color(0.7529412, 0.19607843, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_cpa77"]
+size = Vector3(3, 1.05, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dtvg"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_qudq2"]
+size = Vector3(3.06, 0.05, 0.76)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xlmts"]
+albedo_color = Color(0.96862745, 0.8156863, 0.27450982, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_326jt"]
+size = Vector3(0.5, 0.5, 0.4)
+
+[node name="Snack" type="Node3D" unique_id=657016359]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 127.6, 0, 33)
+metadata/rl_src = "bowling_snack"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.52,0.00|3.000,1.050,0.700", "MeshInstance3D|0.00,1.08,0.00|3.060,0.050,0.760", "MeshInstance3D|-1.00,1.35,-0.05|0.500,0.500,0.400"]
+metadata/rl_fp = "1527371104"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=718657369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.525, 0)
+material_override = SubResource("StandardMaterial3D_v6454")
+mesh = SubResource("BoxMesh_cpa77")
+metadata/rl_src = "MeshInstance3D|0.00,0.52,0.00|3.000,1.050,0.700"
+metadata/rl_fp = "4232721517"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=470781395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.075, 0)
+material_override = SubResource("StandardMaterial3D_8dtvg")
+mesh = SubResource("BoxMesh_qudq2")
+metadata/rl_src = "MeshInstance3D|0.00,1.08,0.00|3.060,0.050,0.760"
+metadata/rl_fp = "719978561"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1478488081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.35, -0.05)
+material_override = SubResource("StandardMaterial3D_xlmts")
+mesh = SubResource("BoxMesh_326jt")
+metadata/rl_src = "MeshInstance3D|-1.00,1.35,-0.05|0.500,0.500,0.400"
+metadata/rl_fp = "1340618690"

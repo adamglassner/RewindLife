@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3djr"]
+albedo_color = Color(0.84705883, 0.84705883, 0.8156863, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_q1cpv"]
+size = Vector3(0.08, 4.4, 0.08)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uloam"]
+albedo_color = Color(0.16862746, 0.16862746, 0.1882353, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_2cnrh"]
+size = Vector3(0.9, 0.08, 0.9)
+
+[node name="FirePole" type="Node3D" unique_id=880220853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4, 0, -16.099998)
+metadata/rl_src = "fire_pole"
+metadata/rl_kids = ["MeshInstance3D|0.00,2.20,0.00|0.080,4.400,0.080", "MeshInstance3D|0.00,0.04,0.00|0.900,0.080,0.900"]
+metadata/rl_fp = "2120076619"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=509589979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+material_override = SubResource("StandardMaterial3D_n3djr")
+mesh = SubResource("BoxMesh_q1cpv")
+metadata/rl_src = "MeshInstance3D|0.00,2.20,0.00|0.080,4.400,0.080"
+metadata/rl_fp = "3367006144"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=737855783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+material_override = SubResource("StandardMaterial3D_uloam")
+mesh = SubResource("BoxMesh_2cnrh")
+metadata/rl_src = "MeshInstance3D|0.00,0.04,0.00|0.900,0.080,0.900"
+metadata/rl_fp = "481290626"

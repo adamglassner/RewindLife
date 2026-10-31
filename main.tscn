@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+
+[node name="Main" type="Node3D"]
+editor_description = "This scene starts the game: the town is built by code when the game runs (scripts/room_builder.gd and friends), so it's empty here.
+
+To see and edit the town in the 3D editor, open res://world.tscn (in the FileSystem panel)."
+script = ExtResource("1")

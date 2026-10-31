@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pjmf"]
+albedo_color = Color(0.9843137, 0.94509804, 0.8627451, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_dh721"]
+size = Vector3(0.42, 0.05, 0.42)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxly6"]
+albedo_color = Color(0.7529412, 0.19607843, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_aq4of"]
+size = Vector3(0.43, 0.012, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j7ir6"]
+size = Vector3(0.2, 0.004, 0.12)
+
+[node name="PizzaBox" type="Node3D" unique_id=1127786877]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.05, 0.765, 30.45)
+metadata/rl_src = "kowalskis_pizza_box"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.03,0.00|0.420,0.050,0.420", "MeshInstance3D|0.00,0.03,-0.10|0.430,0.012,0.080", "MeshInstance3D|0.00,0.05,0.08|0.200,0.004,0.120"]
+metadata/rl_fp = "3091671600"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=114967069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
+material_override = SubResource("StandardMaterial3D_8pjmf")
+mesh = SubResource("BoxMesh_dh721")
+metadata/rl_src = "MeshInstance3D|0.00,0.03,0.00|0.420,0.050,0.420"
+metadata/rl_fp = "3264113297"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=839031535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -0.1)
+material_override = SubResource("StandardMaterial3D_pxly6")
+mesh = SubResource("BoxMesh_aq4of")
+metadata/rl_src = "MeshInstance3D|0.00,0.03,-0.10|0.430,0.012,0.080"
+metadata/rl_fp = "3240755892"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1942652249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0525, 0.08)
+material_override = SubResource("StandardMaterial3D_pxly6")
+mesh = SubResource("BoxMesh_j7ir6")
+metadata/rl_src = "MeshInstance3D|0.00,0.05,0.08|0.200,0.004,0.120"
+metadata/rl_fp = "1445590318"

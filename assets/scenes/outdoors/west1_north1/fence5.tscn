@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/panel.png" id="1_jkwyl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkeq5"]
+albedo_color = Color(0.6117647, 0.41960785, 0.27058825, 1)
+albedo_texture = ExtResource("1_jkwyl")
+roughness = 0.88
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
+[sub_resource type="BoxMesh" id="BoxMesh_i7xof"]
+size = Vector3(0.05, 1.8, 8.4)
+
+[node name="Fence5" type="MeshInstance3D" unique_id=163538378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 0.95, -7.8)
+material_override = SubResource("StandardMaterial3D_vkeq5")
+mesh = SubResource("BoxMesh_i7xof")
+metadata/rl_src = "fence5"
+metadata/rl_fp = "2714908833"

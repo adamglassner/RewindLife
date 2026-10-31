@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdd4j"]
+albedo_color = Color(0.8117647, 0.7764706, 0.70980394, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_4bns2"]
+size = Vector3(0.1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nb3px"]
+albedo_color = Color(0.41568628, 0.41568628, 0.4392157, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_si71a"]
+size = Vector3(0.3, 0.22, 0.16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b02gu"]
+albedo_color = Color(0.2901961, 0.2, 0.16470589, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_6iv82"]
+size = Vector3(0.22, 0.14, 0.02)
+
+[node name="DriveinSpeaker7" type="Node3D" unique_id=671003630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.6, 0, 39)
+metadata/rl_src = "drivein_speaker_7"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.50,0.00|0.100,1.000,0.100", "MeshInstance3D|0.00,1.05,0.00|0.300,0.220,0.160", "MeshInstance3D|0.00,1.05,0.09|0.220,0.140,0.020"]
+metadata/rl_fp = "1230020998"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=755034309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_fdd4j")
+mesh = SubResource("BoxMesh_4bns2")
+metadata/rl_src = "MeshInstance3D|0.00,0.50,0.00|0.100,1.000,0.100"
+metadata/rl_fp = "452506162"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=974884626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
+material_override = SubResource("StandardMaterial3D_nb3px")
+mesh = SubResource("BoxMesh_si71a")
+metadata/rl_src = "MeshInstance3D|0.00,1.05,0.00|0.300,0.220,0.160"
+metadata/rl_fp = "3838843455"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=67141666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0.085)
+material_override = SubResource("StandardMaterial3D_b02gu")
+mesh = SubResource("BoxMesh_6iv82")
+metadata/rl_src = "MeshInstance3D|0.00,1.05,0.09|0.220,0.140,0.020"
+metadata/rl_fp = "1859381558"

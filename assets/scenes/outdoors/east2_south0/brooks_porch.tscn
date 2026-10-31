@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3t7g"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kn0l2"]
+size = Vector3(0.8, 0.018, 0.5)
+
+[node name="BrooksPorch" type="Node3D" unique_id=1214933863]
+metadata/rl_src = "brooks_porch"
+metadata/rl_kids = ["MeshInstance3D|79.60,0.04,8.60|0.800,0.018,0.500"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=351632944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.6, 0.036, 8.6)
+material_override = SubResource("StandardMaterial3D_u3t7g")
+mesh = SubResource("BoxMesh_kn0l2")
+metadata/rl_src = "MeshInstance3D|79.60,0.04,8.60|0.800,0.018,0.500"
+metadata/rl_fp = "1985105567"

@@ -1,0 +1,48 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d0cs"]
+albedo_color = Color(0.9490196, 0.7607843, 0.1882353, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_8j287"]
+size = Vector3(0.18, 3, 0.18)
+
+[sub_resource type="BoxMesh" id="BoxMesh_26uq2"]
+size = Vector3(5.6, 0.16, 0.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6gvd5"]
+size = Vector3(0.12, 3.2, 0.12)
+
+[node name="GoalpostE" type="Node3D" unique_id=349920370]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 77, 0, -56)
+metadata/rl_src = "goalpost_e"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.50,0.00|0.180,3.000,0.180", "MeshInstance3D|0.00,3.00,0.00|5.600,0.160,0.160", "MeshInstance3D|-2.75,4.60,0.00|0.120,3.200,0.120", "MeshInstance3D|2.75,4.60,0.00|0.120,3.200,0.120"]
+metadata/rl_fp = "2857710656"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=506271883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_2d0cs")
+mesh = SubResource("BoxMesh_8j287")
+metadata/rl_src = "MeshInstance3D|0.00,1.50,0.00|0.180,3.000,0.180"
+metadata/rl_fp = "3433342800"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=726579252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_2d0cs")
+mesh = SubResource("BoxMesh_26uq2")
+metadata/rl_src = "MeshInstance3D|0.00,3.00,0.00|5.600,0.160,0.160"
+metadata/rl_fp = "3093771217"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=963381473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, 4.6, 0)
+material_override = SubResource("StandardMaterial3D_2d0cs")
+mesh = SubResource("BoxMesh_6gvd5")
+metadata/rl_src = "MeshInstance3D|-2.75,4.60,0.00|0.120,3.200,0.120"
+metadata/rl_fp = "1205823509"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1897950730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 4.6, 0)
+material_override = SubResource("StandardMaterial3D_2d0cs")
+mesh = SubResource("BoxMesh_6gvd5")
+metadata/rl_src = "MeshInstance3D|2.75,4.60,0.00|0.120,3.200,0.120"
+metadata/rl_fp = "3629160136"

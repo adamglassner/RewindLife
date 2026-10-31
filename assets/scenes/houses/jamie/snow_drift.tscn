@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4x1f"]
+albedo_color = Color(0.9490196, 0.95686275, 0.9647059, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_dycgw"]
+size = Vector3(1.6, 0.35, 1.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ibaa"]
+albedo_color = Color(0.9098039, 0.9254902, 0.93333334, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_wfpvg"]
+size = Vector3(1, 0.25, 0.8)
+
+[node name="SnowDrift" type="Node3D" unique_id=1684026763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 0, 10.6)
+metadata/rl_src = "snow_drift"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.17,0.00|1.600,0.350,1.200", "MeshInstance3D|0.20,0.42,0.05|1.000,0.250,0.800"]
+metadata/rl_fp = "2710025771"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1041570440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175, 0)
+material_override = SubResource("StandardMaterial3D_q4x1f")
+mesh = SubResource("BoxMesh_dycgw")
+metadata/rl_src = "MeshInstance3D|0.00,0.17,0.00|1.600,0.350,1.200"
+metadata/rl_fp = "4056900819"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=459268017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.42, 0.05)
+material_override = SubResource("StandardMaterial3D_2ibaa")
+mesh = SubResource("BoxMesh_wfpvg")
+metadata/rl_src = "MeshInstance3D|0.20,0.42,0.05|1.000,0.250,0.800"
+metadata/rl_fp = "348761685"

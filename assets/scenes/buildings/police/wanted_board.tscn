@@ -1,0 +1,107 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no7uw"]
+albedo_color = Color(0.5411765, 0.41568628, 0.2901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_r7x87"]
+size = Vector3(1.6, 1, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybabk"]
+albedo_color = Color(0.9098039, 0.8627451, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_mq258"]
+size = Vector3(0.42, 0.56, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7677"]
+albedo_color = Color(0.41568628, 0.3529412, 0.2901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_v4uol"]
+size = Vector3(0.2, 0.22, 0.004)
+
+[node name="WantedBoard" type="Node3D" unique_id=1812378150]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.405, 0, -19.199999)
+metadata/rl_src = "wanted_board"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.55,0.00|1.600,1.000,0.030", "MeshInstance3D|-0.50,1.55,0.02|0.420,0.560,0.012", "Label3D|-0.50,1.75,0.03|WANTED", "MeshInstance3D|-0.50,1.50,0.03|0.200,0.220,0.004", "MeshInstance3D|0.00,1.55,0.02|0.420,0.560,0.012", "Label3D|0.00,1.75,0.03|WANTED", "MeshInstance3D|0.00,1.50,0.03|0.200,0.220,0.004", "MeshInstance3D|0.50,1.55,0.02|0.420,0.560,0.012", "Label3D|0.50,1.75,0.03|WANTED", "MeshInstance3D|0.50,1.50,0.03|0.200,0.220,0.004"]
+metadata/rl_fp = "3935584341"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=893425146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+material_override = SubResource("StandardMaterial3D_no7uw")
+mesh = SubResource("BoxMesh_r7x87")
+metadata/rl_src = "MeshInstance3D|0.00,1.55,0.00|1.600,1.000,0.030"
+metadata/rl_fp = "1169206887"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1320918707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.55, 0.021)
+material_override = SubResource("StandardMaterial3D_ybabk")
+mesh = SubResource("BoxMesh_mq258")
+metadata/rl_src = "MeshInstance3D|-0.50,1.55,0.02|0.420,0.560,0.012"
+metadata/rl_fp = "155748563"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=820208076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.75, 0.031)
+pixel_size = 0.0022
+double_sided = false
+modulate = Color(0.5411765, 0.16470589, 0.101960786, 1)
+text = "WANTED"
+font_size = 40
+metadata/rl_src = "Label3D|-0.50,1.75,0.03|WANTED"
+metadata/rl_fp = "4020155036"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1153703631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.5, 0.029)
+material_override = SubResource("StandardMaterial3D_p7677")
+mesh = SubResource("BoxMesh_v4uol")
+metadata/rl_src = "MeshInstance3D|-0.50,1.50,0.03|0.200,0.220,0.004"
+metadata/rl_fp = "3536049877"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1267219897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0.021)
+material_override = SubResource("StandardMaterial3D_ybabk")
+mesh = SubResource("BoxMesh_mq258")
+metadata/rl_src = "MeshInstance3D|0.00,1.55,0.02|0.420,0.560,0.012"
+metadata/rl_fp = "2148358497"
+
+[node name="Sign2" type="Label3D" parent="." unique_id=433184556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0.031)
+pixel_size = 0.0022
+double_sided = false
+modulate = Color(0.5411765, 0.16470589, 0.101960786, 1)
+text = "WANTED"
+font_size = 40
+metadata/rl_src = "Label3D|0.00,1.75,0.03|WANTED"
+metadata/rl_fp = "3497754602"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=1059017351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.029)
+material_override = SubResource("StandardMaterial3D_p7677")
+mesh = SubResource("BoxMesh_v4uol")
+metadata/rl_src = "MeshInstance3D|0.00,1.50,0.03|0.200,0.220,0.004"
+metadata/rl_fp = "895429603"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=853547484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.55, 0.021)
+material_override = SubResource("StandardMaterial3D_ybabk")
+mesh = SubResource("BoxMesh_mq258")
+metadata/rl_src = "MeshInstance3D|0.50,1.55,0.02|0.420,0.560,0.012"
+metadata/rl_fp = "1999757158"
+
+[node name="Sign3" type="Label3D" parent="." unique_id=987132400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.75, 0.031)
+pixel_size = 0.0022
+double_sided = false
+modulate = Color(0.5411765, 0.16470589, 0.101960786, 1)
+text = "WANTED"
+font_size = 40
+metadata/rl_src = "Label3D|0.50,1.75,0.03|WANTED"
+metadata/rl_fp = "817553071"
+
+[node name="Box7" type="MeshInstance3D" parent="." unique_id=43951390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, 0.029)
+material_override = SubResource("StandardMaterial3D_p7677")
+mesh = SubResource("BoxMesh_v4uol")
+metadata/rl_src = "MeshInstance3D|0.50,1.50,0.03|0.200,0.220,0.004"
+metadata/rl_fp = "1932553384"

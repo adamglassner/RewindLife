@@ -1,0 +1,84 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7qag"]
+albedo_color = Color(0.2901961, 0.2901961, 0.32156864, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_myfey"]
+size = Vector3(0.035, 2.3, 0.035)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cshyt"]
+albedo_color = Color(0.22745098, 0.22745098, 0.2509804, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kt503"]
+size = Vector3(0.9, 0.06, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pwhih"]
+albedo_color = Color(0.8901961, 0.6627451, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_41276"]
+size = Vector3(0.12, 0.16, 0.08)
+
+[node name="CellDoor" type="Node3D" unique_id=411874668]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.9, 0, -20.4)
+metadata/rl_src = "cell_door"
+metadata/rl_kids = ["MeshInstance3D|-0.40,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|-0.24,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|-0.08,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|0.08,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|0.24,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|0.40,1.18,0.00|0.035,2.300,0.035", "MeshInstance3D|0.00,1.10,0.00|0.900,0.060,0.050", "MeshInstance3D|0.36,1.10,0.00|0.120,0.160,0.080"]
+metadata/rl_fp = "2972286372"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=311521956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|-0.40,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "1238984749"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=398413392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|-0.24,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "2201152991"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=1520679357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|-0.08,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "3943706913"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=1636539791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|0.08,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "2567930196"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=289029219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|0.24,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "825376274"
+
+[node name="Box6" type="MeshInstance3D" parent="." unique_id=2135942086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.18, 0)
+material_override = SubResource("StandardMaterial3D_p7qag")
+mesh = SubResource("BoxMesh_myfey")
+metadata/rl_src = "MeshInstance3D|0.40,1.18,0.00|0.035,2.300,0.035"
+metadata/rl_fp = "3930455552"
+
+[node name="Box7" type="MeshInstance3D" parent="." unique_id=870291915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+material_override = SubResource("StandardMaterial3D_cshyt")
+mesh = SubResource("BoxMesh_kt503")
+metadata/rl_src = "MeshInstance3D|0.00,1.10,0.00|0.900,0.060,0.050"
+metadata/rl_fp = "2733282613"
+
+[node name="Box8" type="MeshInstance3D" parent="." unique_id=1818282052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36, 1.1, 0)
+material_override = SubResource("StandardMaterial3D_pwhih")
+mesh = SubResource("BoxMesh_41276")
+metadata/rl_src = "MeshInstance3D|0.36,1.10,0.00|0.120,0.160,0.080"
+metadata/rl_fp = "2502343190"

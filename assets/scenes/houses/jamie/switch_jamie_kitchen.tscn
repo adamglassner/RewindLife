@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nypud"]
+albedo_color = Color(0.95686275, 0.9019608, 0.78431374, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_22oxt"]
+size = Vector3(0.085, 0.13, 0.012)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4emw"]
+albedo_color = Color(0.84705883, 0.8156863, 0.7529412, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_tspci"]
+size = Vector3(0.022, 0.045, 0.014)
+
+[node name="SwitchJamieKitchen" type="Node3D" unique_id=1133216088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.58, 0, 3.958)
+metadata/rl_src = "switch_jamie_kitchen"
+metadata/rl_kids = ["Plate"]
+metadata/rl_fp = "3966533401"
+
+[node name="Plate" type="Node3D" parent="." unique_id=1184723950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+metadata/rl_src = "Plate"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012", "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"]
+metadata/rl_fp = "3148425057"
+
+[node name="Box1" type="MeshInstance3D" parent="Plate" unique_id=2112273381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.006)
+material_override = SubResource("StandardMaterial3D_nypud")
+mesh = SubResource("BoxMesh_22oxt")
+metadata/rl_src = "MeshInstance3D|0.00,0.00,0.01|0.085,0.130,0.012"
+metadata/rl_fp = "3552524831"
+
+[node name="Box2" type="MeshInstance3D" parent="Plate" unique_id=1818108353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012, 0.019)
+material_override = SubResource("StandardMaterial3D_x4emw")
+mesh = SubResource("BoxMesh_tspci")
+metadata/rl_src = "MeshInstance3D|0.00,0.01,0.02|0.022,0.045,0.014"
+metadata/rl_fp = "127491398"

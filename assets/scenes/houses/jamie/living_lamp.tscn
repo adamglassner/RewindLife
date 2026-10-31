@@ -1,0 +1,48 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tno35"]
+albedo_color = Color(0.36078432, 0.22745098, 0.14901961, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_0j3pg"]
+size = Vector3(0.36, 0.04, 0.36)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0udya"]
+size = Vector3(0.06, 1.6, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfa2n"]
+albedo_color = Color(0.95686275, 0.8509804, 0.627451, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.95686275, 0.8509804, 0.627451, 1)
+emission_energy_multiplier = 0.114
+
+[sub_resource type="BoxMesh" id="BoxMesh_mtun6"]
+size = Vector3(0.48, 0.36, 0.48)
+
+[node name="LivingLamp" type="Node3D" unique_id=1227730088]
+metadata/rl_src = "living_lamp"
+metadata/rl_kids = ["MeshInstance3D|5.22,0.02,0.50|0.360,0.040,0.360", "MeshInstance3D|5.22,0.82,0.50|0.060,1.600,0.060", "MeshInstance3D|5.22,1.75,0.50|0.480,0.360,0.480"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1694260660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22, 0.02, 0.5)
+material_override = SubResource("StandardMaterial3D_tno35")
+mesh = SubResource("BoxMesh_0j3pg")
+metadata/rl_src = "MeshInstance3D|5.22,0.02,0.50|0.360,0.040,0.360"
+metadata/rl_fp = "1897058844"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1762010296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22, 0.82, 0.5)
+material_override = SubResource("StandardMaterial3D_tno35")
+mesh = SubResource("BoxMesh_0udya")
+metadata/rl_src = "MeshInstance3D|5.22,0.82,0.50|0.060,1.600,0.060"
+metadata/rl_fp = "2769280369"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=486456487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22, 1.75, 0.5)
+material_override = SubResource("StandardMaterial3D_bfa2n")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_mtun6")
+metadata/rl_src = "MeshInstance3D|5.22,1.75,0.50|0.480,0.360,0.480"
+metadata/rl_fp = "2941115246"

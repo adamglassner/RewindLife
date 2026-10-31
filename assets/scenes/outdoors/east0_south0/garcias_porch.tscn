@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0w7lu"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_5bbgu"]
+size = Vector3(0.8, 0.018, 0.5)
+
+[node name="GarciasPorch" type="Node3D" unique_id=1580773728]
+metadata/rl_src = "garcias_porch"
+metadata/rl_kids = ["MeshInstance3D|24.60,0.04,8.60|0.800,0.018,0.500"]
+metadata/rl_fp = "2404196493"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=390533046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6, 0.036, 8.6)
+material_override = SubResource("StandardMaterial3D_0w7lu")
+mesh = SubResource("BoxMesh_5bbgu")
+metadata/rl_src = "MeshInstance3D|24.60,0.04,8.60|0.800,0.018,0.500"
+metadata/rl_fp = "1735277813"

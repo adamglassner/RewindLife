@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mi44t"]
+albedo_color = Color(0.18039216, 0.2901961, 0.22745098, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_b7xrw"]
+size = Vector3(3.6, 1.3, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0ec1"]
+albedo_color = Color(0.5411765, 0.3529412, 0.23137255, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_53odw"]
+size = Vector3(3.8, 0.08, 0.12)
+
+[node name="HighClassChalkboard" type="Node3D" unique_id=17282534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130, 0, -61.835)
+metadata/rl_src = "high_class_chalkboard"
+metadata/rl_kids = ["MeshInstance3D|0.00,1.60,0.00|3.600,1.300,0.050", "MeshInstance3D|0.00,0.92,0.04|3.800,0.080,0.120", "Label3D|-0.60,1.75,0.03|Summer School
+U."]
+metadata/rl_fp = "2999861125"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1157107972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_mi44t")
+mesh = SubResource("BoxMesh_b7xrw")
+metadata/rl_src = "MeshInstance3D|0.00,1.60,0.00|3.600,1.300,0.050"
+metadata/rl_fp = "1664593882"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=927286094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0.04)
+material_override = SubResource("StandardMaterial3D_u0ec1")
+mesh = SubResource("BoxMesh_53odw")
+metadata/rl_src = "MeshInstance3D|0.00,0.92,0.04|3.800,0.080,0.120"
+metadata/rl_fp = "683569493"
+
+[node name="Sign1" type="Label3D" parent="." unique_id=1122786316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.75, 0.03)
+pixel_size = 0.0035
+double_sided = false
+modulate = Color(0.9098039, 0.9098039, 0.8784314, 1)
+text = "Summer School
+U.S. History"
+font_size = 48
+metadata/summer_text = "Summer School
+U.S. History"
+metadata/year_text = "U.S. History
+The Constitution"
+metadata/rl_src = "Label3D|-0.60,1.75,0.03|Summer School
+U."
+metadata/rl_fp = "4106847891"

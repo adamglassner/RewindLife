@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j76pd"]
+albedo_color = Color(0.47843137, 0.2901961, 0.18039216, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_40xne"]
+size = Vector3(0.3, 0.18, 0.18)
+
+[node name="FootballField" type="Node3D" unique_id=1353436342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -56)
+metadata/rl_src = "football_field"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.09,0.00|0.300,0.180,0.180"]
+metadata/rl_fp = "1381190802"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=459621500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09, 0)
+material_override = SubResource("StandardMaterial3D_j76pd")
+mesh = SubResource("BoxMesh_40xne")
+metadata/rl_src = "MeshInstance3D|0.00,0.09,0.00|0.300,0.180,0.180"
+metadata/rl_fp = "1903554342"

@@ -1,0 +1,78 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7a5n"]
+albedo_color = Color(0.78431374, 0.7372549, 0.65882355, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_gx3dv"]
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y4dy"]
+albedo_color = Color(0.30980393, 0.72156864, 0.9098039, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.18039216, 0.53333336, 0.78431374, 1)
+emission_energy_multiplier = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_8nvwp"]
+size = Vector3(2.7, 0.04, 2.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3wf3"]
+albedo_color = Color(0.8509804, 0.8235294, 0.7607843, 1)
+roughness = 0.88
+
+[sub_resource type="BoxMesh" id="BoxMesh_kogps"]
+size = Vector3(0.4, 1.24, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hsd70"]
+size = Vector3(0.9, 0.12, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rrea"]
+albedo_color = Color(0.7490196, 0.9098039, 0.96862745, 1)
+roughness = 0.88
+emission_enabled = true
+emission = Color(0.7490196, 0.9098039, 0.96862745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2dt8u"]
+size = Vector3(0.18, 0.5, 0.18)
+
+[node name="MallFountain" type="Node3D" unique_id=705436346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, 0, 66)
+metadata/rl_src = "mall_fountain"
+metadata/rl_kids = ["MeshInstance3D|0.00,0.25,0.00|3.000,0.500,3.000", "MeshInstance3D|0.00,0.50,0.00|2.700,0.040,2.700", "MeshInstance3D|0.00,0.62,0.00|0.400,1.240,0.400", "MeshInstance3D|0.00,1.26,0.00|0.900,0.120,0.900", "MeshInstance3D|0.00,1.56,0.00|0.180,0.500,0.180"]
+metadata/rl_fp = "920100806"
+
+[node name="Box1" type="MeshInstance3D" parent="." unique_id=1932180316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = SubResource("StandardMaterial3D_r7a5n")
+mesh = SubResource("BoxMesh_gx3dv")
+metadata/rl_src = "MeshInstance3D|0.00,0.25,0.00|3.000,0.500,3.000"
+metadata/rl_fp = "326796142"
+
+[node name="Box2" type="MeshInstance3D" parent="." unique_id=1281379827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_8y4dy")
+mesh = SubResource("BoxMesh_8nvwp")
+metadata/rl_src = "MeshInstance3D|0.00,0.50,0.00|2.700,0.040,2.700"
+metadata/rl_fp = "2193714065"
+
+[node name="Box3" type="MeshInstance3D" parent="." unique_id=892775061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+material_override = SubResource("StandardMaterial3D_e3wf3")
+mesh = SubResource("BoxMesh_kogps")
+metadata/rl_src = "MeshInstance3D|0.00,0.62,0.00|0.400,1.240,0.400"
+metadata/rl_fp = "461524387"
+
+[node name="Box4" type="MeshInstance3D" parent="." unique_id=223052646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26, 0)
+material_override = SubResource("StandardMaterial3D_e3wf3")
+mesh = SubResource("BoxMesh_hsd70")
+metadata/rl_src = "MeshInstance3D|0.00,1.26,0.00|0.900,0.120,0.900"
+metadata/rl_fp = "1635452266"
+
+[node name="Box5" type="MeshInstance3D" parent="." unique_id=1981777471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56, 0)
+material_override = SubResource("StandardMaterial3D_2rrea")
+mesh = SubResource("BoxMesh_2dt8u")
+metadata/rl_src = "MeshInstance3D|0.00,1.56,0.00|0.180,0.500,0.180"
+metadata/rl_fp = "750109365"
