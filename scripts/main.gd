@@ -5,7 +5,7 @@ extends Node3D
 const POST_SHADER := """
 shader_type canvas_item;
 // The "memory look": warm grade, soft vignette, light film grain.
-// `memory` briefly adds soft focus and a faded-print tint during Memory Moments.
+// (`memory` is unused now: Memory Moments no longer change the picture.)
 uniform sampler2D screen_tex : hint_screen_texture, filter_linear_mipmap;
 uniform float memory : hint_range(0.0, 1.0) = 0.0;
 uniform float grain = 0.035;
@@ -19,12 +19,9 @@ void fragment() {
 	vec2 uv = SCREEN_UV;
 	vec3 col = texture(screen_tex, uv).rgb;
 	vec3 blur = textureLod(screen_tex, uv, 3.0).rgb;
-	col = mix(col, blur, memory * 0.55);
 	float l = dot(col, vec3(0.299, 0.587, 0.114));
 	col *= mix(vec3(1.0), vec3(1.05, 0.99, 0.92), 0.7);          // warm highlights
 	col += vec3(0.045, 0.012, 0.04) * (1.0 - l) * 0.7;            // plum shadows
-	col = mix(col, vec3(l) * vec3(1.12, 1.0, 0.82) + 0.05, memory * 0.35);
-	col += blur * memory * 0.22;                                  // halation
 	vec2 d = uv - 0.5;
 	col *= mix(0.7, 1.0, smoothstep(0.85, 0.3, length(d * vec2(1.0, 0.8))));
 	col += (rand(uv * 900.0 + TIME) - 0.5) * grain;
@@ -270,6 +267,7 @@ func _ready() -> void:
 
 	# The town's look comes from the asset files (assets/scenes): anything edited there in the
 	# Godot editor goes onto the town now (see asset_library.gd)
+	Achievements.save({})      # (so the Ironite Launcher lists them, even before the first one)
 	var t0 := Time.get_ticks_msec()
 	var n_assets := AssetLibrary.apply(self, "--all-assets" in OS.get_cmdline_user_args())
 	if n_assets > 0:
@@ -710,6 +708,7 @@ func _on_continue() -> void:
 		rig.target = cam_point(sim.global_position)
 		hud.set_free_will_button(sim.free_will)
 		hud.set_memory_count(sim.memories.size())
+		Achievements.save(sim.memories)     # (memories from saves made before achievements)
 		hud.notify("Welcome back!")
 	_update_lighting()
 	hud.refresh_clock()
@@ -2042,12 +2041,11 @@ func award_memory(who: Sim, id: String) -> void:
 		hud.show_memory(m[0], m[1])
 		hud.set_memory_count(who.memories.size())
 		audio.play_ui("memory_chime", -6.0)
-		var tw := create_tween()
-		tw.tween_method(func(v: float): post_mat.set_shader_parameter("memory", v), 0.0, 1.0, 1.2)
-		tw.tween_interval(2.5)
-		tw.tween_method(func(v: float): post_mat.set_shader_parameter("memory", v), 1.0, 0.0, 2.0)
+		# (no screen effect: the card and the chime are enough; the old soft-focus glow was too bright)
+		Achievements.save(who.memories)
 	elif split.is_p2(who):
 		split.memory(String(Content.MEMORIES[id][0]))
+		Achievements.save({id: true})        # (player 2 is on this computer too)
 	elif net.is_host():
 		net.send_memory(who.slot, id)
 	if not who.puppet:

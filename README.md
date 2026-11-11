@@ -29,7 +29,22 @@ The first time it opens, Godot takes a few seconds to import. That's normal.
 > **Project → Project Settings → Rendering → Renderer** and choose
 > **gl_compatibility**, then restart Godot.
 
-## What's new in v1.9.0: the whole town in Godot's 3D editor
+## What's new in v1.10.0: achievements
+
+- **Memory Moments are achievements.** **ACHIEVEMENTS** on the title screen and in the pause
+  menu lists all 60, grouped At Home, Around Town, Holidays & Seasons and School, with a
+  little photo for each one you've found and the date you found it.
+- Once you find one in any saved game, it stays found on this computer (loading an older
+  save adds the ones it already has).
+- They're kept in `%APPDATA%\Ironite\Achievements\rewindlife.json` (icons in
+  `rewindlife\` beside it), the same place the **Ironite Launcher** reads achievements
+  from, so they show on its Achievements page too.
+- **No more bright glow** over the screen when you find a Memory Moment: just the card and
+  the chime.
+- The icons are made by `tools/make_achievement_icons.py` (into `assets/achievements/`);
+  which group each one is in is in `scripts/achievements.gd`.
+
+## What was new in v1.9.0: the whole town in Godot's 3D editor
 
 `main.tscn` is empty in the editor because the town is built by code when the game runs.
 Now there's **`world.tscn`**: the whole town as a normal Godot scene, to look around in
@@ -750,6 +765,7 @@ The town is laid out and run from code; how everything looks is in the asset fil
 |---|---|
 | `scripts/asset_library.gd` | The assets: what counts as one thing and where its file goes, and putting edited assets onto the town at startup. |
 | `tools/bake_assets.gd` | Makes the asset files (scenes, .glb models, .png patterns) from the code. |
+| `scripts/achievements.gd` | Memory Moments as achievements: the shared file the Ironite Launcher reads, and the groups. |
 | `tools/build_world_scene.gd` | Puts the asset scenes together into `world.tscn`, the whole town for the 3D editor. |
 | `scripts/game_clock.gd` | The heartbeat. Starts Sat June 14, 1986, 8 AM. Emits `minute_passed` once per game minute. |
 | `scripts/needs.gd` | Hunger, Energy, Fun, Social: decay over time, mood calculation. |

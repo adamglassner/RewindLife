@@ -3,10 +3,15 @@ extends RefCounted
 ## The game's version, and what changed in each one (shown on the WHAT'S NEW
 ## screen from the title screen and the pause menu). Newest first.
 
-const VERSION := "1.9.0"
+const VERSION := "1.10.0"
 const YEAR := 2026          # (for the copyright line on the CREDITS screen)
 
 const ENTRIES := [
+	["1.10.0", "Achievements", [
+		"Memory Moments are now achievements: ACHIEVEMENTS on the title screen and the pause menu lists all 60, by place (At Home, Around Town, Holidays & Seasons, School), with the date you found each one.",
+		"Once found in any saved game, a Memory Moment stays found, and the Ironite Launcher shows them on its Achievements page.",
+		"No more bright glow over the screen when you find a Memory Moment: just the card and the chime.",
+	]],
 	["1.9.0", "The whole town in Godot's 3D editor", [
 		"world.tscn: open it in Godot to see the whole town in the 3D editor, in folders (Houses > Jamie > Fridge ...).",
 		"Click walls, floors, trees and decorations one by one; select a fridge, a car or a townsperson as a whole.",

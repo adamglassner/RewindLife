@@ -68,6 +68,7 @@ func _ready() -> void:
 			_show("online", "main")],
 		["OPTIONS", func(): _show("options", "main")],
 		["CONTROLS", func(): _show("controls", "main")],
+		["ACHIEVEMENTS", func(): _open_achievements("main")],
 		["WHAT'S NEW", func(): _show("changelog", "main")],
 		["CREDITS", func(): _show("credits", "main")],
 		["QUIT", func(): _press(quit_pressed)],
@@ -78,6 +79,7 @@ func _ready() -> void:
 		["2 PLAYERS", func(): _press(local_coop_pressed)],
 		["OPTIONS", func(): _show("options", "pause")],
 		["CONTROLS", func(): _show("controls", "pause")],
+		["ACHIEVEMENTS", func(): _open_achievements("pause")],
 		["WHAT'S NEW", func(): _show("changelog", "pause")],
 		["CREDITS", func(): _show("credits", "pause")],
 		["DEBUG", func(): _open_debug()],
@@ -88,6 +90,7 @@ func _ready() -> void:
 	_panels["controls"] = _build_controls()
 	_panels["changelog"] = _build_changelog()
 	_panels["credits"] = _build_credits()
+	_panels["achievements"] = _build_achievements()
 	_panels["confirm"] = _build_confirm()
 	_panels["debug_lock"] = _build_debug_lock()
 	_panels["debug"] = _build_debug()
@@ -188,7 +191,7 @@ func go_back() -> void:
 	elif _current == "who":
 		sound.emit("ui_move")
 		characters_back.emit()
-	elif _current in ["options", "controls", "confirm", "changelog", "credits", "debug_lock", "debug"]:
+	elif _current in ["options", "controls", "confirm", "changelog", "credits", "achievements", "debug_lock", "debug"]:
 		sound.emit("ui_move")
 		_show(_back_to if _back_to != "" else ("pause" if mode == Mode.PAUSE else "main"),
 			"" if _back_to in ["main", "pause"] else _back_to)
@@ -482,6 +485,88 @@ func _build_changelog() -> Control:
 	v.add_child(back)
 	fr[0].set_meta("buttons", [t, back])
 	return fr[0]
+
+
+## ACHIEVEMENTS: every Memory Moment, found or not (found in any saved game on this computer).
+var _ach_title: Label
+var _ach_list: VBoxContainer
+var _ach_scroll: ScrollContainer
+
+
+func _build_achievements() -> Control:
+	var fr := _framed("ACHIEVEMENTS")
+	var v: VBoxContainer = fr[1]
+	_ach_title = (v.get_child(0) as Label)
+	var sub := _label("Every Memory Moment you find is an achievement. They show in the Ironite Launcher too.", 18, Palette.CRT)
+	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sub.custom_minimum_size = Vector2(900, 0)
+	v.add_child(sub)
+	_ach_scroll = ScrollContainer.new()
+	_ach_scroll.custom_minimum_size = Vector2(900, 430)
+	_ach_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_ach_scroll.focus_mode = Control.FOCUS_ALL
+	v.add_child(_ach_scroll)
+	_ach_list = VBoxContainer.new()
+	_ach_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_ach_list.add_theme_constant_override("separation", 6)
+	_ach_scroll.add_child(_ach_list)
+	var back := _button("BACK", go_back)
+	v.add_child(back)
+	fr[0].set_meta("buttons", [_ach_scroll, back])
+	return fr[0]
+
+
+func _open_achievements(back_to: String) -> void:
+	_fill_achievements()
+	_show("achievements", back_to)
+	_ach_scroll.scroll_vertical = 0
+
+
+func _fill_achievements() -> void:
+	for c in _ach_list.get_children():
+		c.queue_free()
+	var have := Achievements.unlocked()
+	var found := 0
+	for id in have:
+		if Content.MEMORIES.has(id):
+			found += 1
+	_ach_title.text = "ACHIEVEMENTS  ·  %d / %d" % [found, Content.MEMORIES.size()]
+	for cat in Achievements.ORDER:
+		var n := 0
+		var got := 0
+		for id in Content.MEMORIES:
+			if Achievements.CATEGORY.get(id, "") == cat:
+				n += 1
+				if have.has(id):
+					got += 1
+		_ach_list.add_child(_label("%s  (%d / %d)" % [String(cat).to_upper(), got, n], 24, Palette.GOLD))
+		for id in Content.MEMORIES:
+			if Achievements.CATEGORY.get(id, "") != cat:
+				continue
+			var m: Array = Content.MEMORIES[id]
+			var on := have.has(id)
+			var row := HBoxContainer.new()
+			row.add_theme_constant_override("separation", 14)
+			var pic := TextureRect.new()
+			pic.texture = Achievements.icon(id, on)
+			pic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			pic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			pic.custom_minimum_size = Vector2(64, 64)
+			row.add_child(pic)
+			var txt := VBoxContainer.new()
+			txt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			txt.add_theme_constant_override("separation", 0)
+			txt.add_child(_label(String(m[0]), 22, Palette.PAPER if on else Palette.MUTED))
+			var body := _label(String(m[1]) if on else "Not found yet.", 17, Palette.CRT if on else Palette.MUTED)
+			body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			body.custom_minimum_size = Vector2(640, 0)
+			txt.add_child(body)
+			row.add_child(txt)
+			if on and int(have[id]) > 0:
+				var d := Time.get_date_dict_from_unix_time(int(have[id]))
+				row.add_child(_label("%d/%d/%d" % [d["month"], d["day"], d["year"]], 17, Palette.MUTED))
+			row.modulate.a = 1.0 if on else 0.75
+			_ach_list.add_child(row)
 
 
 ## CREDITS: who made the game.
