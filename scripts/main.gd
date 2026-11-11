@@ -321,6 +321,9 @@ func add_sim(slot: int, puppet: bool) -> Sim:
 	s.notice.connect(func(t: String): _sim_notice(s, t))
 	s.delivery_ordered.connect(func(kind: String): _order_delivery(s, kind))
 	s.teleported.connect(func(): _on_teleported(s))
+	s.stopped_here.connect(func():
+		if net.is_client() and s == sim:
+			net.send_my_move(s, true))
 	s.bike_event.connect(func(what: String): _on_bike_event(s, what))
 	s.why_unreachable = _why_unreachable
 	s.mail_status = func(h: String) -> String: return town_life.mail_status(h)

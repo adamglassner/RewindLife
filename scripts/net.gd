@@ -503,9 +503,9 @@ func rq_exit_car(key: String, cx: float, cz: float, cyaw: float, sx: float, sz: 
 
 
 ## (friend) Where I'm walking, a few times a second.
-func send_my_move(s: Sim) -> void:
+func send_my_move(s: Sim, now := false) -> void:
 	_send_t += get_physics_process_delta_time()
-	if _send_t < 1.0 / SEND_HZ:
+	if _send_t < 1.0 / SEND_HZ and not now:
 		return
 	_send_t = 0.0
 	rq_move.rpc_id(1, s.global_position.x, s.global_position.z, s._face_yaw)

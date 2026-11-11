@@ -29,7 +29,15 @@ The first time it opens, Godot takes a few seconds to import. That's normal.
 > **Project → Project Settings → Rendering → Renderer** and choose
 > **gl_compatibility**, then restart Godot.
 
-## What's new in v1.10.0: achievements
+## What's new in v1.10.1: online walking fix
+
+Playing online, a friend walking their own kid (first person especially) was pulled back to
+where they'd started whenever they let go of the keys, and if they'd walked more than a few
+steps they snapped right back there. Their copy of the game was holding on to the last spot
+the host had sent before they set off. Now they stay where they stop, the host is told that
+exact spot, and everyone sees them there.
+
+## What was new in v1.10.0: achievements
 
 - **Memory Moments are achievements.** **ACHIEVEMENTS** on the title screen and in the pause
   menu lists all 60, grouped At Home, Around Town, Holidays & Seasons and School, with a

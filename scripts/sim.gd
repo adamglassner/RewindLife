@@ -13,6 +13,7 @@ signal activity_finished(act: Activity, obj: SmartObject)
 signal notice(text: String)
 signal delivery_ordered(kind: String)
 signal teleported
+signal stopped_here        # (online) the player let go of the keys: tell the host where we stopped
 signal paid(amount: float, reason: String)
 signal bike_event(what: String)        # "bought", "mount", "park"
 signal called(home: String)           # a phone call to this home's kid went through
@@ -501,12 +502,20 @@ func _drive_puppet(dir: Vector3) -> void:
 	if dir.length() < 0.01:
 		if local_control:
 			local_control = false
-			_ignore_net_until = Time.get_ticks_msec() + 700   # until the host has caught up
+			# Stay put where we stopped (not where the host last said we were, before we set off:
+			# that pulled the player back, or snapped them there if they'd gone far), and send
+			# the host this last spot, until it has caught up.
+			net_pos = Vector3(global_position.x, 0, global_position.z)
+			net_yaw = _face_yaw
+			_ignore_net_until = Time.get_ticks_msec() + 1000
+			stopped_here.emit()
 		return
 	if hidden:
 		return
 	if not local_control:
 		local_control = true
+		if state == State.DOING:
+			state = State.IDLE      # (getting up from whatever we were doing: the host stops it too)
 		_set_pose("stand")
 	velocity = dir.normalized() * WALK_SPEED * 1.15 * (BIKE_MULT if (riding or _pose == "bike") else (RUN_MULT if running else 1.0))
 	var before := global_position
@@ -1215,7 +1224,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _puppet_physics(delta: float) -> void:
-	if not local_control:
+	if not local_control and Time.get_ticks_msec() >= _ignore_net_until:
 		var to := net_pos - global_position
 		to.y = 0.0
 		if to.length() > 4.0:

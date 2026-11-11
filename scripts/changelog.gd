@@ -3,10 +3,14 @@ extends RefCounted
 ## The game's version, and what changed in each one (shown on the WHAT'S NEW
 ## screen from the title screen and the pause menu). Newest first.
 
-const VERSION := "1.10.0"
+const VERSION := "1.10.1"
 const YEAR := 2026          # (for the copyright line on the CREDITS screen)
 
 const ENTRIES := [
+	["1.10.1", "Online walking fix", [
+		"Playing online, friends who walked themselves around (first person especially) got pulled back to where they started when they let go of the keys. Now they stay where they stopped, and everyone sees them there.",
+		"Getting up from a chair or bed by walking away works online too.",
+	]],
 	["1.10.0", "Achievements", [
 		"Memory Moments are now achievements: ACHIEVEMENTS on the title screen and the pause menu lists all 60, by place (At Home, Around Town, Holidays & Seasons, School), with the date you found each one.",
 		"Once found in any saved game, a Memory Moment stays found, and the Ironite Launcher shows them on its Achievements page.",
